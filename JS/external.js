@@ -1,4 +1,6 @@
 "use strict";
+//welcome log
+console.log("Hello from external Javascript");
 
 //welcome alert
 let welcomeMessage = "Welcome to my website";
@@ -8,9 +10,9 @@ alert(welcomeMessage);
 let whatIsYourFavoriteColor = prompt("What's your favorite color Holmes?");
 alert("Noice! " + whatIsYourFavoriteColor + " is my favorite color too.");
 
-//exercise 3 from JS_Exercises document
-//Movie rentals
+//********exercise 3 from JS_Exercises document**********
 
+//Movie rentals
 let theLittleMermaid = prompt("For how many days would you like to rent The Little Mermaid?");
 let brotherBear = prompt("For how many days would you like to rent Brother Bear?");
 let Hercules = prompt("For how many days would you like to rent Hercules?");
@@ -26,7 +28,6 @@ alert("Thank You! Your total cost is $" + totalCost +".");
 
 
 //Contractor pay
-
 let google = 400;
 let amazon = 380;
 let facebook = 350;
@@ -50,7 +51,6 @@ let studentSchedule = ["1400", "1530", "1700"]
 let scheduleConflict = studentSchedule.indexOf(classTime);
 let registrationEligibility = ((classAttendance < 30 && scheduleConflict == -1));
 alert("It is " + registrationEligibility + " that you can register for this course");
-
 
 //Hat shop
 let itemsMinimum = 2;
