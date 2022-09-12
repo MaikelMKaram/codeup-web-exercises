@@ -60,4 +60,4 @@ let itemsBought = prompt("How many items are you purchasing today?");
 let premiumMembership = confirm("Are you a Premium member? Please press 'OK' for Yes, 'cancel' for No");
 
 let offerEligibility = ((itemsBought > itemsMinimum || premiumMembership == true) && offerCurrent == true);
-alert("It is " + offerEligibility + " that this purchase qualifies for the offer");
+alert("Does this purchase qualify for offer: " + offerEligibility);
