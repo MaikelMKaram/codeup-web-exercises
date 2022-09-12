@@ -13,6 +13,8 @@ function sayHello(name){
     return ("hello " + name);
 }
 
+console.log(sayHello("codeup"));
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
