@@ -80,7 +80,7 @@ function calculateTip(x,y){
     return x * y;
 }
 
-console.log(calculateTip(.20,20));
+console.log(calculateTip(.20,20).toFixed(2));
 
 /**
  * TODO:
@@ -92,7 +92,7 @@ console.log(calculateTip(.20,20));
 let totalBill = prompt("What is the amount on your final bill?")
 let tipPercentage = prompt("What tip percentage would you like to leave?")
 
-console.log(calculateTip(totalBill,tipPercentage))
+console.log(calculateTip(totalBill,tipPercentage).toFixed(2))
 
 /**
  * TODO:
@@ -113,4 +113,4 @@ function applyDiscount(originalPrice,discountPercent){
     return originalPrice - (originalPrice * discountPercent);
 }
 
-console.log(applyDiscount(100,0.2));
+console.log(applyDiscount(100,0.2).toFixed(2));
