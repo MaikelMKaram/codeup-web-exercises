@@ -138,7 +138,7 @@ var luckyNumber = Math.floor(Math.random() * 6);
 let totalBill = prompt("What is the total on your receipt?");
 alert("Your luck number is " + luckyNumber + "!");
 alert("Your amount before the discount is $" + totalBill);
-alert("Your final price after discount is " + calculateTotal(luckyNumber,+totalBill));
+alert("Your final price after discount is $" + calculateTotal(luckyNumber,+totalBill));
 
 
 /**
@@ -160,7 +160,25 @@ alert("Your final price after discount is " + calculateTotal(luckyNumber,+totalB
  * HINT: The way we prompt for a value could be improved
  */
 
-let confirmation = confirm("Would you like to know some fun facts about a random number you can enter?")
-console.log(confirmation == true){
+let confirmation = confirm("Would you like to know some fun facts about a random number you can enter?");
 
+if(confirmation === true){
+    let numberSelected = Number(prompt("Please choose a random number"));
+    if (!isNaN(numberSelected)) {
+        if (numberSelected % 2 === 0) {
+            alert("Your number is even");
+        } else {
+            alert("Your number is odd");
+        }
+        if (numberSelected >= 0 && numberSelected !== -0){
+            alert("Your number is positive");
+        } else {
+            alert("Your number is negative");
+        }
+        alert("Adding 100 to your number results in " + (numberSelected + 100));
+    } else {
+        alert("Incorrect data type");
+    }
 }
+
+
