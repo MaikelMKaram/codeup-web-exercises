@@ -182,3 +182,39 @@ if(confirmation === true){
 }
 
 
+//****************** code refactored using functions below
+
+function confirmQuestion() {
+    let confirmationQuestion = confirm("Would you like to know some fun facts about a random number you can enter?");
+    if(confirmationQuestion){
+        chooseNumberQuestion();
+    }
+}
+function chooseNumberQuestion(){
+    let numberSelected = Number(prompt("Please choose a random number"));
+    isEvenOrOdd(numberSelected);
+}
+function isEvenOrOdd(num) {
+    if (num % 2 === 0) {
+        alert("Your number is even");
+        add100(num);
+    }
+    else {
+        alert("Your number is odd");
+        add100(num);
+    }
+}
+function add100(numb) {
+    alert(numb + 100);
+    NorP(numb);
+}
+function NorP(the) {
+    if (the < 0) {
+        alert("Your number is negative");
+    }
+    else {
+        alert("Your number is positive");
+
+    }
+}
+    confirmQuestion();
