@@ -9,6 +9,19 @@ showMultiplicationTable(5);
 
 //Exercise 3 - Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even.
 
+function isEven0rOdd(){
+    for (let i = 0; i < 10; i++) {
+        let random = Math.floor(Math.random() * 200) + 20;
+        if (random % 2 === 0) {
+            console.log(random + " is even")
+        }
+        else {
+                console.log(random + " is odd")
+        }
+    }
+}
+
+isEven0rOdd();
 
 
 //Exercise 4 - Create a for loop that uses console.log to create the output shown below.
