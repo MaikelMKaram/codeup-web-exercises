@@ -1,35 +1,36 @@
 
 
-// * TODO:
-//     * Create a function named `analyzeColor` that accepts a string that is a color
-// * name as input. This function should return a message which relates to the
-// * color stated in the argument of the function. For colors you do not have
-// * responses written for, return a string stating so
-// *
-// * Example:
-// *  > analyzeColor('blue') // returns "blue is the color of the sky"
-// *  > analyzeColor('red') // returns "Strawberries are red"
-// *
-// *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
-// *
-// * You should use an if-else-if-else block to return different messages.
-// *
-// * Test your function by passing various string literals to it and
-// * console.logging the function's return value
-// */
+/**
+ * TODO:
+ * Create a function named `analyzeColor` that accepts a string that is a color
+* name as input. This function should return a message which relates to the
+* color stated in the argument of the function. For colors you do not have
+* responses written for, return a string stating so
+*
+* Example:
+*  > analyzeColor('blue') // returns "blue is the color of the sky"
+*  > analyzeColor('red') // returns "Strawberries are red"
+*
+*  > analyzeColor('cyan') // returns "I don't know anything about cyan"
+*
+* You should use an if-else-if-else block to return different messages.
+*
+* Test your function by passing various string literals to it and
+* console.logging the function's return value
+*/
 
-// function analyzeColor(color){
-//     if(color.toLowerCase() === "red") {
-//         console.log("Red is red");
-//         }
-//     else if(color.toLowerCase() === "blue"){
-//         console.log("Blue is blue");
-//         }
-//     else {console.log("I don't know anything about " + color);
-//     }
-// }
-//
-// analyzeColor("Blue");
+function analyzeColor(color){
+    if(color.toLowerCase() === "red") {
+        console.log("Red is red");
+        }
+    else if(color.toLowerCase() === "blue"){
+        console.log("Blue is blue");
+        }
+    else {console.log("I don't know anything about " + color);
+    }
+}
+
+analyzeColor("Blue");
 
 
 // Don't change the next two lines!
@@ -45,14 +46,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
-//analyzeColor(randomColor);
+analyzeColor(randomColor);
 
 
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
 
 
 /**
@@ -85,9 +85,32 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTip(x,y){
+    let finalAmount;
+    if(parseFloat(x) === 0){
+        finalAmount = Number(x)
+    }
+    else if(parseFloat(x) === 1){
+        finalAmount = Number(y) * 0.90
+    }
+    else if(parseFloat(x) === 2){
+        finalAmount = Number(y) * 0.75
+    }
+    else if(parseFloat(x) === 3){
+        finalAmount = Number(y) * 0.65
+    }
+    else if(parseFloat(x) === 4){
+        finalAmount = Number(y) * 0.5
+    }
+    else if(parseFloat(x) === 5){
+        finalAmount = Number(y) * 0
+    }
+    else {console.log("Invalid Number")
+    }
+    return finalAmount;
+}
 
-
-
+alert(calculateTip(2,100));
 
 /**
  * TODO:
@@ -123,5 +146,45 @@ var luckyNumber = Math.floor(Math.random() * 6);
  * HINT: The way we prompt for a value could be improved
  */
 
+function isBoolean(x) {
+    return typeof x === "boolean"
+}
 
+function isString(x){
+    return typeof x === "string"
+}
 
+function isNotString(x){
+    return typeof x !== "string"
+}
+
+function isEmptyString(x){
+    return x === ""
+}
+
+function isNotANumber(x){
+    return typeof x != "number"
+}
+
+function isNegative(x){
+    return x < 0
+}
+
+function isPositive(x){
+    return x > 0
+}
+
+function isZero(x){
+    return x == 0
+}
+
+function isArray(x){
+    return Array.isArray(x)
+}
+
+function upperCase(x){
+    if(typeof x !== "string"){
+        return false
+    }
+    else {return x.toUpperCase()}
+}
