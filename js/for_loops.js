@@ -64,3 +64,4 @@ for (i = 1; i <= 9; i++){
 for (i = 100; i >= 5; i-=5){
     console.log((''+i));
 }
+
