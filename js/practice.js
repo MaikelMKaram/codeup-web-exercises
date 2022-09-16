@@ -188,3 +188,7 @@ function upperCase(x){
     }
     else {return x.toUpperCase()}
 }
+
+
+// Do-while loop will do the instruction before checking the while condition
+//while loop checks the while condition before doing the instruction
