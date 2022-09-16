@@ -16,6 +16,7 @@ do {
     else {
         console.log(conesBought + " cones sold");
         totalCones -= conesBought;
+        console.log("Cones left: " + +totalCones);
     }
 } while (totalCones > 0);
 
