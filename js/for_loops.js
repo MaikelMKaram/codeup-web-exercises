@@ -35,8 +35,8 @@ isEven0rOdd();
 // 88888888
 // 999999999
 
-for (i = 0; i < 10; i++){
-        console.log((''+i).repeat(i))
+for (let i = 0; i < 10; i++){
+        console.log((i).toString().repeat(i))
     }
 
 //Exercise 5 - Create a for loop that uses console.log to create the output shown below.
@@ -61,7 +61,7 @@ for (i = 0; i < 10; i++){
 // 10
 // 5
 
-for (i = 100; i >= 5; i-=5){
-    console.log((''+i));
+for (let i = 100; i >= 5; i-=5){
+    console.log((i));
 }
 
