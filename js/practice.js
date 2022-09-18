@@ -1,5 +1,4 @@
 
-
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -19,18 +18,6 @@
 * console.logging the function's return value
 */
 
-function analyzeColor(color){
-    if(color.toLowerCase() === "red") {
-        console.log("Red is red");
-        }
-    else if(color.toLowerCase() === "blue"){
-        console.log("Blue is blue");
-        }
-    else {console.log("I don't know anything about " + color);
-    }
-}
-
-analyzeColor("Blue");
 
 
 // Don't change the next two lines!
@@ -38,15 +25,16 @@ analyzeColor("Blue");
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
 
-analyzeColor(randomColor);
 
 
 /**
@@ -61,8 +49,6 @@ analyzeColor(randomColor);
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
-
 
 
 /**
@@ -85,32 +71,6 @@ analyzeColor(randomColor);
  * return value.
  */
 
-function calculateTip(x,y){
-    let finalAmount;
-    if(parseFloat(x) === 0){
-        finalAmount = Number(x)
-    }
-    else if(parseFloat(x) === 1){
-        finalAmount = Number(y) * 0.90
-    }
-    else if(parseFloat(x) === 2){
-        finalAmount = Number(y) * 0.75
-    }
-    else if(parseFloat(x) === 3){
-        finalAmount = Number(y) * 0.65
-    }
-    else if(parseFloat(x) === 4){
-        finalAmount = Number(y) * 0.5
-    }
-    else if(parseFloat(x) === 5){
-        finalAmount = Number(y) * 0
-    }
-    else {console.log("Invalid Number")
-    }
-    return finalAmount;
-}
-
-alert(calculateTip(2,100));
 
 /**
  * TODO:
@@ -121,11 +81,7 @@ alert(calculateTip(2,100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
-
-
-
+//var luckyNumber = Math.floor(Math.random() * 6);
 
 /**
  * TODO:
@@ -146,49 +102,49 @@ var luckyNumber = Math.floor(Math.random() * 6);
  * HINT: The way we prompt for a value could be improved
  */
 
-function isBoolean(x) {
-    return typeof x === "boolean"
-}
-
-function isString(x){
-    return typeof x === "string"
-}
-
-function isNotString(x){
-    return typeof x !== "string"
-}
-
-function isEmptyString(x){
-    return x === ""
-}
-
-function isNotANumber(x){
-    return typeof x != "number"
-}
-
-function isNegative(x){
-    return x < 0
-}
-
-function isPositive(x){
-    return x > 0
-}
-
-function isZero(x){
-    return x == 0
-}
-
-function isArray(x){
-    return Array.isArray(x)
-}
-
-function upperCase(x){
-    if(typeof x !== "string"){
-        return false
-    }
-    else {return x.toUpperCase()}
-}
-
 
 // Do-while loop will do the instruction before checking the while condition
 //while loop checks the while condition before doing the instruction
+
+// Exercise 2 - Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
+
+
+
+//Exercise 3 - Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even.
+
+
+
+
+//Exercise 4 - Create a for loop that uses console.log to create the output shown below.
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+
+
+//Exercise 5 - Create a for loop that uses console.log to create the output shown below.
+// 100
+// 95
+// 90
+// 85
+// 80
+// 75
+// 70
+// 65
+// 60
+// 55
+// 50
+// 45
+// 40
+// 35
+// 30
+// 25
+// 20
+// 15
+// 10
+// 5
