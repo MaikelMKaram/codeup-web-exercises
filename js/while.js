@@ -44,7 +44,7 @@ Yay! I sold them all! // If there are no more cones
 */
 
 
-let totalCones = Math.floor(Math.random()*100) + 50;
+let totalCones = Math.floor(Math.random()*50) + 50;
 console.log("Total cones to sell: " + totalCones);
 
 do {
