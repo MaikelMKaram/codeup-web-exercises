@@ -19,7 +19,6 @@
 */
 
 
-
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -35,20 +34,11 @@
  * You should see a different message every time you refresh the page
  */
 
-
-
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-
-/**
- * TODO:
- * Prompt the user for a color when the page loads, and pass the input from the
- * user to your `analyzeColor` function. Alert the return value from your
- * function to show it to the user.
- */
 
 
 /**
@@ -70,6 +60,8 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+
 
 
 /**
@@ -155,7 +147,6 @@ Prompt the user for an odd number between 1 and 50. Use a loop and a break state
 Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 Your output should look like this:
 
-
 Number to skip is: 27
 
 Here is an odd number: 1
@@ -192,7 +183,6 @@ Here is an odd number: 49
 
 Create a while loop that uses console.log() to create the output shown below.
 
-
 2
 4
 8
@@ -210,7 +200,6 @@ Create a while loop that uses console.log() to create the output shown below.
 32768
 65536
 */
-
 
 
 

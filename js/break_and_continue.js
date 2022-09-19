@@ -46,7 +46,6 @@ for(i = 1;; i++){
 for(let i = 0; i < 50; i++){
 if (i == oddNumb){
         console.log("Yikes! Skipping number: " + i);
-        continue;
     }
     else if(i % 2 > 0){
         console.log("Here is an odd Number: " + i);
