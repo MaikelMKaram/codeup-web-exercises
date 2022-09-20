@@ -131,10 +131,35 @@
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.
+     */
+
+    function createBook (bookTitle, bookAuthor){
+        return {
+             bookTitle: bookTitle,
+             bookAuthor: bookAuthor,
+        }
+    }
+
+    let bonusBooks = [
+            createBook("Book1", "Author1"),
+            createBook("Book2", "Author2"),
+            createBook("Book3", "Author3"),
+    ]
+
+    console.log(bonusBooks[1]);
+    console.log(bonusBooks[0].bookTitle);
+
+    /*
      * - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
 
+    function showBookInfo({}){
+        return {
+
+        }
+
+    }
 
 })();
