@@ -36,6 +36,7 @@
 
     console.log(person.sayHello());
 
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -84,12 +85,14 @@
     let books = [
         {Title: "Who?", Author: {firstName: "Mike", lastName: "Jones"}},
         {Title: "How To Be Invisible", Author: {firstName: "John", lastName: "Cena"}},
-        {Title: "Yippikaye Motherf*", Author: {firstName: "Bruce", lastName: "Willis"}},
-        {Title: "Do You Smell What The Rock Is Cookin'??", Author: {firstName: "The", lastName: "Rock"}},
+        {Title: "It's a Christmas Movie. Yipikaye Motherf*", Author: {firstName: "Bruce", lastName: "Willis"}},
+        {Title: "Can You Smell What I'm Cooking?", Author: {firstName: "The", lastName: "Rock"}},
         {Title: "Tallest Man Alive", Author: {firstName: "Kevin", lastName: "Hart"}}
     ]
 
+    console.log(books[0].Title);
     console.log(books[0].Author.firstName);
+    console.log(books[0].Author.lastName);
 
     /**
      * TODO:
@@ -116,6 +119,10 @@
      *      ...
      */
 
+    books.forEach(x);
+    function x(item, index, array){
+        console.log(`Book # ${index+ 1} \nTitle: ${item.Title} \nAuthor: ${item.Author.firstName} ${item.Author.lastName} \n---`);
+    }
 
 
     /**
@@ -128,5 +135,6 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();
