@@ -155,11 +155,15 @@
      *   `showBookInfo` function.
      */
 
-    function showBookInfo({}){
-        return {
-
-        }
-
+    let obj = {
+        Title: "bookTitle1",
+        Author: "bookAuthor1",
     }
+
+    function showBookInfo(object){
+        console.log(obj.Title);
+        console.log(obj.Author);
+    }
+    showBookInfo();
 
 })();
