@@ -150,9 +150,18 @@ console.log(removeABC("Pants-off Danceoff"));
  * Should work with only one word.
  */
 
-function reverseOdd(){
-
+function reverseOdd(str){
+    let wordSplit = str.split(" ").map(word => {
+        if (word.length % 2 > 0){
+            return word.split("").reverse().join("");
+        } else {
+            return word;
+        }
+    })
+    console.log(wordSplit.join(" "));
 }
+
+reverseOdd("what would a woodchuck do");
 
 /**
  * TODO:
