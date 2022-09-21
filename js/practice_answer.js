@@ -14,6 +14,15 @@
  */
 
 
+function addUp(num){
+    let count = 0;
+    for(let i = 1; i <= num; i++){
+        count += i;
+    } console.log(count);
+}
+
+addUp(7);
+
 
 
 /**
@@ -30,6 +39,13 @@
  * Your output must be case-sensitive (see second example).
  */
 
+function charCount(x,y){
+    return y.split("").filter(function (i){
+        return i == x;
+    }).length;
+}
+
+console.log(charCount("x","Xxxyy"));
 
 /**
  * TODO:
@@ -49,6 +65,12 @@
  * Input always contains a vowel.
  */
 
+function firstVowel(str){
+ let test = str.search(/[aeiouAEIOU]/g);
+ console.log(test);
+}
+
+firstVowel("pants");
 
 
 /**
@@ -69,6 +91,18 @@
  * For an added challenge, try to solve this without using strings.
  */
 
+function digitCount(n){
+    let count = 0;
+    if (n >= 1) ++count;
+
+    while (n/ 10 >= 1){
+        n /= 10;
+        ++count;
+    }
+    return count;
+}
+
+console.log(digitCount(123123));
 
 
 /**
@@ -87,6 +121,18 @@
 
 
 
+function removeABC(str){
+    let letters = str.replace(/[abc]/g,"");
+    let letterDiff = str.length - letters.length;
+    if (letterDiff !== 0){
+        return letters;
+    } else {
+        return null;
+    }
+}
+
+console.log(removeABC("Pants-off Danceoff"));
+
 
 /**
  * TODO:
@@ -104,7 +150,18 @@
  * Should work with only one word.
  */
 
+function reverseOdd(str){
+    let wordSplit = str.split(" ").map(word => {
+        if (word.length % 2 > 0){
+            return word.split("").reverse().join("");
+        } else {
+            return word;
+        }
+    })
+    console.log(wordSplit.join(" "));
+}
 
+reverseOdd("what would a woodchuck do");
 
 /**
  * TODO:
