@@ -186,7 +186,7 @@ function binary(num){
     return num.toString(2);
 }
 
-console.log(binary(1024));
+console.log(binary(0));
 
 /**
  * TODO:
