@@ -190,85 +190,6 @@ console.log(binary(0));
 
 /**
  * TODO:
- * Create a function named `analyzeColor` that accepts a string that is a color
-* name as input. This function should return a message which relates to the
-* color stated in the argument of the function. For colors you do not have
-* responses written for, return a string stating so
-*
-* Example:
-*  > analyzeColor('blue') // returns "blue is the color of the sky"
-*  > analyzeColor('red') // returns "Strawberries are red"
-*
-*  > analyzeColor('cyan') // returns "I don't know anything about cyan"
-*
-* You should use an if-else-if-else block to return different messages.
-*
-* Test your function by passing various string literals to it and
-* console.logging the function's return value
-*/
-
-
-
-
-
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color every time the page loads)
-//var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-//var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-
-/**
- * TODO:
- * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
- * You should see a different message every time you refresh the page
- */
-
-/**
- * TODO:
- * Comment out the code above, and refactor your function to use a switch-case statement
- */
-
-
-
-/**
- * TODO:
- * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
- * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
- * everything for free!.
- *
- * Write a function named `calculateTotal` which accepts a lucky number and total
- * amount, and returns the discounted price.
- *
- * Example:
- * calculateTotal(0, 100) // returns 100
- * calculateTotal(4, 100) // returns 50
- * calculateTotal(5, 100) // returns 0
- *
- * Test your function by passing it various values and checking for the expected
- * return value.
- */
-
-
-
-
-/**
- * TODO:
- * Uncomment the line below to generate a random number between 0 and 5.
- * (In this line of code, 0 is inclusive, and 6 is exclusive)
- * Prompt the user for their total bill, then use your `calculateTotal` function
- * and alerts to display to the user what their lucky number was, what their
- * price before the discount was, and what their price after the discount is.
- */
-// Generate a random number between 0 and 6
-//var luckyNumber = Math.floor(Math.random() * 6);
-
-/**
- * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
@@ -292,10 +213,25 @@ console.log(binary(0));
 
 // Exercise 2 - Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 
+function showMultiplicationTable(num){
+    for(let i = 1; i <= 10; i++){
+        console.log(num + " x " + i + " = " + num*i)
+    }
+}
 
+showMultiplicationTable(2);
 
 //Exercise 3 - Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even.
 
+
+for (let i = 1; i <= 10; i++){
+    let randomNumber = Math.floor(Math.random() * 100 ) + 20;
+    if(randomNumber % 2 == 0){
+        console.log(`${randomNumber} is even`)
+    } else {
+        console.log(`${randomNumber} is odd`)
+    }
+}
 
 //Exercise 4 - Create a for loop that uses console.log to create the output shown below.
 // 1
@@ -308,6 +244,9 @@ console.log(binary(0));
 // 88888888
 // 999999999
 
+for (i = 1; i <= 9; i++){
+    console.log((``+i).repeat(i));
+}
 
 
 //Exercise 5 - Create a for loop that uses console.log to create the output shown below.
@@ -332,10 +271,11 @@ console.log(binary(0));
 // 10
 // 5
 
+for (let i = 100; i >= 5; i -= 5){
+    console.log(i);
+}
 
-/*
-Create a file named break_and_continue.js in the js directory.
-Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
+/*Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 Your output should look like this:
 
@@ -368,7 +308,20 @@ Here is an odd number: 47
 Here is an odd number: 49
 */
 
+let oddNumber;
+do {
+    oddNumber = prompt("Please select and odd number between 1 and 50")
+} while (oddNumber % 2 == 0 || oddNumber < 1 || oddNumber > 50);
 
+
+for(let i = 0; i < 50; i++){
+    if (i === +oddNumber){
+        console.log("Yikes! Skipping number: " + i);
+    }
+    else if(i % 2 > 0){
+        console.log("Here is an odd Number: " + i);
+    }
+}
 
 /* While Loop
 * Create a file named while.js in the js directory.
@@ -393,19 +346,17 @@ Create a while loop that uses console.log() to create the output shown below.
 65536
 */
 
+let j = 1;
 
+while (j < 65536){
+    console.log(j *= 2);
+}
 
 
 
 /*An ice cream seller can't go home until she sells all of her cones. First write enough code that generates a random number between 50 and 100 representing the amount of cones to sell before you start your loop. Inside of the loop your code should generate another random number between 1 and 5, simulating the amount of cones being bought by her clients. Use a do-while loop to log to the console the amount of cones sold to each person. The below code shows how to get the random numbers for this exercise.
 
-
-// This is how you get a random number between 50 and 100
-var allCones = Math.floor(Math.random() * 50) + 50;
-// This expression will generate a random number between 1 and 5
-Math.floor(Math.random() * 5) + 1;
-The output should be similar to the following:
-
 5 cones sold...  // if there are enough cones
 Cannot sell you 6 cones I only have 3...  // If there are not enough cones
 Yay! I sold them all! // If there are no more cones*/
+
