@@ -85,7 +85,7 @@
     let books = [
         {Title: "Who?", Author: {firstName: "Mike", lastName: "Jones"}},
         {Title: "How To Be Invisible", Author: {firstName: "John", lastName: "Cena"}},
-        {Title: "It's a Christmas Movie. Yipikaye Motherf*", Author: {firstName: "Bruce", lastName: "Willis"}},
+        {Title: "It's definitely a Christmas Movie. Yipikaye Motherf*", Author: {firstName: "Bruce", lastName: "Willis"}},
         {Title: "Can You Smell What I'm Cooking?", Author: {firstName: "The", lastName: "Rock"}},
         {Title: "Tallest Man Alive", Author: {firstName: "Kevin", lastName: "Hart"}}
     ]
