@@ -64,13 +64,6 @@ console.log((calculateTax(100,12)));
 
 
 
-
-
-
-
-
-
-
 /* Which Generation Are You?
  * Try finding your ancestors and offspring with code.
  *
