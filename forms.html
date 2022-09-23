@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+
+<form method="POST" action="https://request-inspector.glitch.me/">
+
+  <label for="email">Email:</label>
+    <input id="email" name="email" type="email">
+    <br><br>
+
+  <label for="password">Password:</label>
+    <input id="password" name="password" type="password">
+    <br><br>
+
+  <label for="bio">Bio:</label>
+    <textarea  id="bio" name="bio" rows="4" cols="50"></textarea>
+    <br><br>
+
+  <label><strong>How did you hear about us?</strong></label><br>
+    <input type="radio" id="billboard" name="customerSource" value="billboard"><label for="billboard">Billboard</label><br>
+    <input type="radio" id="radio advertisement" name="customerSource" value="radio advertisement"><label for="radio advertisement">Radio Advertisement</label><br>
+    <input type="radio" id="internet advertisement" name="customerSource" value="internet advertisement"><label for="internet advertisement">Internet Advertisement</label><br>
+    <input type="radio" id="other" name="customerSource" value="other"><label for="other">Other</label><br><br>
+
+    <input type="checkbox" id="billboard" name="customerSource" value="billboard"><label for="billboard">Billboard</label><br>
+    <input type="checkbox" id="radio advertisement" name="customerSource" value="radio advertisement"><label for="radio advertisement">Radio Advertisement</label><br>
+    <input type="checkbox" id="internet advertisement" name="customerSource" value="internet advertisement"><label for="internet advertisement">Internet Advertisement</label><br>
+    <input type="checkbox" id="other" name="customerSource" value="other"><label for="other">Other</label><br><br>
+
+    <label for="browser"><strong>Which web browser are you using?</strong></label>
+    <select name="browser" id="browser">
+        <option value="firefox">Firefox</option>
+        <option value="chrome">Chrome</option>
+        <option value="brave">Brave</option>
+        <option value="safari">Safari</option>
+    </select>
+
+    <br><br>
+  <input type="submit">
+
+
+
+
+</form>
+
+</body>
+</html>
