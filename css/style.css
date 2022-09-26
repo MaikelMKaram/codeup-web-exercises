@@ -1,3 +1,44 @@
-.fancy-header {
+header {
+    text-align: center;
+}
+
+header>.fancy-header {
     color: purple;
+}
+
+h2 {
+    text-decoration-line: underline;
+}
+
+body {
+    background-image: url("/img/doge.png"), url("/img/greek-vase.webp");
+    background-position: top;
+    background-repeat: no-repeat,repeat;
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+ul, ol {
+    font-family: monospace;
+}
+
+table {
+    width:  400px;
+    padding: 1px;
+    text-align: center;
+}
+
+th {
+    font-size: 1.2em;
+}
+
+a:link {
+    color: darkblue;
+}
+
+a:hover{
+    color: #373fff;
+}
+
+a:visited {
+    color: grey;
 }
