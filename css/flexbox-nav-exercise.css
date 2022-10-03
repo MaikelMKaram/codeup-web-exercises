@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.navbar {
+    background: #c1c1c1;
+    color: #fff;
+    height: 4em;
+}
+
+.navbar .logo {
+    display: flex;
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: darkorange;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li:nth-of-type(1) {
+    margin-left: 20px;
+    justify-content: left;
+}
+
+.navbar ul li:nth-of-type(2) {
+    margin-left: 20px;
+    justify-content: left;
+}
+
+.navbar ul li:nth-of-type(3) {
+    margin-left: 20px;
+    justify-content: left;
+}
+
+.navbar ul li:nth-of-type(4) {
+    margin-left: 20px;
+    justify-content: left;
+    margin-right: auto;
+}
+
+.navbar ul li:nth-of-type(5) {
+    margin-left: 20px;
+    justify-content: right;
+}
+
+.navbar ul li:nth-of-type(6) {
+    margin-left: 20px;
+    justify-content: right;
+}
+
+.navbar ul li:nth-of-type(7) {
+    margin-left: 20px;
+    justify-content: right;
+}
+
+.navbar ul li:nth-of-type(8) {
+    margin: 0 20px;
+    justify-content: right;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
