@@ -25,3 +25,51 @@ function objectAdd (arr,str){
 }
 
 objectAdd([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia');
+
+
+// //Write a function named calculateChange that takes in two
+// inputs, totalPaid and totalCost. If both inputs are numeric
+// br numeric strings, calculateChange should return the change
+// after subtracting the cost from the amount paid. The return
+// should be in $x.xx format as a string Note: it should return
+// with two decial places. If either or both inputs are not
+// numeric or numeric strings, calculateChange should return
+// false.
+
+function calculateChange(totalPaid, totalCost){
+    if(isNaN(totalPaid) || isNaN(totalCost) || typeof totalPaid === "boolean" || typeof totalCost === "boolean"){
+        return false;
+    } else{
+        return (Number(totalCost) - Number(totalPaid)).toFixed(2);
+    }
+}
+
+console.log(calculateChange());
+
+//     // $6.00//
+//     calculateChange(10, 5)
+// 1/ $5.001/
+// calculateChange("100", 50)
+// 11 $50.00//
+// calculateChange(10, true)
+// 11 false//
+// calculateChange([1, 2, 3], 10)
+// 11 false//
+// calculateChange ( "Codeup", 100)
+// // false//
+// calculateChange()
+// // false
+
+
+// re-write the following using a for loop: var i = 20; while (i >= 0) { console.log(i); i--; }
+
+for (let i = 20; i >= 0; i--);
+
+// Add ‘strawberry’ to the beginning, middle, and end of the array.
+var fruits = ["mango", "blueberries", "oranges", "banana", "papaya", "kiwi"];
+
+
+fruits.splice(fruits.length/2,0, "strawberry");
+console.log(fruits);
+
+
