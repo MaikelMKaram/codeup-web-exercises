@@ -38,15 +38,13 @@ ul {
 }
 
 .navbar ul li {
-    flex: 1;
     align-items: center;
-    padding: 1em 0;
+    margin: 1em 0.6em;
 }
 
 .navbar ul li:nth-of-type(5) {
     flex-grow: 10;
     text-align: center;
-    margin: auto;
 }
 
 .icon {
