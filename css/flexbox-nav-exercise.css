@@ -10,6 +10,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
 
 ul {
     list-style-type: none;
@@ -18,7 +22,7 @@ ul {
 .navbar {
     background: #c1c1c1;
     color: #fff;
-    height: 3.75em;
+    height: 4em;
 }
 
 .navbar a {
@@ -26,26 +30,23 @@ ul {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    line-height: 3.75em;
+    display: inline-block;
 }
 
 .navbar a:hover {
     color: lightblue;
 }
 
-.navbar ul {
-    display: flex;
-    align-items: center;
-}
-
 .navbar ul li {
     flex: 1;
-    text-align: center;
+    align-items: center;
+    padding: 1em 0;
 }
 
 .navbar ul li:nth-of-type(5) {
     flex-grow: 10;
     text-align: center;
+    margin: auto;
 }
 
 .icon {
