@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height:4.2em;
+    width: 4.2em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: orange;
+}
+
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0 0.5em;
+    align-items: center;
+}
