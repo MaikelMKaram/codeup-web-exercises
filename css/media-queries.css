@@ -75,6 +75,7 @@ footer {
         flex-wrap: wrap;
         margin: 0.8em;
     }
+
     .alert-info {
         display: none;
     }
@@ -83,7 +84,6 @@ footer {
         justify-content: left;
         margin: 0 auto 0 0;
     }
-
 
     .nav-links {
         flex-direction: row;
@@ -94,7 +94,6 @@ footer {
     }
 
     .nav-links li {
-        display: flex;
         background-color: white;
         height: 3em;
         margin-bottom: 0.8em;
