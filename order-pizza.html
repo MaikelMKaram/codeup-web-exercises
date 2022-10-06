@@ -79,86 +79,170 @@
      <div class="tab-content" id="myTabContent">
 
          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-             <!-- Size and Crust Card -->
-             <div class="card" style="width: 18rem;">
-                 <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                 </div>
-                 <div class="card" style="width: 18rem;">
-                     <div class="card-header">
-                         Featured
-                     </div>
-                     <ul class="list-group list-group-flush">
-                         <li class="list-group-item">An item</li>
-                         <li class="list-group-item">A second item</li>
-                         <li class="list-group-item">A third item</li>
-                     </ul>
-                 </div>
-                 <div class="card" style="width: 18rem;">
-                     <div class="card-header">
-                         Featured
-                     </div>
-                     <ul class="list-group list-group-flush">
-                         <li class="list-group-item">An item</li>
-                         <li class="list-group-item">A second item</li>
-                         <li class="list-group-item">A third item</li>
-                     </ul>
-                 </div>
 
-                 <div class="card-body">
-                     <a href="#" class="card-link">Card link</a>
+             <!-- Size and Crust Card -->
+             <div class="card">
+                 <div class="card-header p-0 m-0">
+                     <div class="navbar p-3 bg-primary text-light">Choose size and crust</div>
+                 </div>
+                 <div class="card-body p-2">
+                     <div class="card-text">
+                         <div class="card">
+                             <div class="card-body p-0">
+                                 <ul class="list-group">
+                                     <li class="list-group-item disabled bg-light">Hand Tossed</li>
+                                     <li class="list-group-item">Garlic seasoned crust, with rich buttery taste.</li>
+                                     <li class="list-group-item">
+                                         <input class="form-radio-input me-1" name="hand_tossed_crispy_thin" type="radio" value="large" aria-label='Small (10")'>
+                                         Small (10")
+                                     </li>
+                                     <li class="list-group-item">
+                                         <input class="form-radio-input me-1" name="hand_tossed_crispy_thin" type="radio" value="medium" aria-label='Medium (12")'>
+                                         Medium (12")
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+                         <br>
+                         <div class="card">
+                             <div class="card-body p-0">
+                                 <ul class="list-group">
+                                     <li class="list-group-item disabled bg-light">Crispy Thin</li>
+                                     <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                                     <li class="list-group-item">
+                                         <input class="form-radio-input me-1" name="hand_tossed_crispy_thin" type="radio" value="large" aria-label='Medium (12")'>
+                                         Medium (12")
+                                     </li>
+                                     <li class="list-group-item">
+                                         <input class="form-radio-input me-1" name="hand_tossed_crispy_thin" type="radio" value="medium" aria-label='Large (14")'>
+                                         Large (14")
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="card-footer">
+                     <a href="#" class="btn btn-primary next-btn" style="float: right;" role="button" id="first-tab-next">Next Step ></a>
                  </div>
              </div>
-             <!-- Size and Crust Card ends -->
          </div>
+             <!-- Size and Crust Card ends -->
 
          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
              <!-- Cheese and Sauce Card -->
-             <div class="card" style="width: 18rem;">
-                 <img src="..." class="card-img-top" alt="...">
-                 <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             <div class="card">
+                 <div class="card-header p-0 m-0">
+                     <div class="navbar p-3 bg-primary text-light">Choose Cheese and Sauce</div>
                  </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item">An item</li>
-                     <li class="list-group-item">A second item</li>
-                     <li class="list-group-item">A third item</li>
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="card-link">Card link</a>
-                     <a href="#" class="card-link">Another link</a>
+                 <div class="card-body p-2">
+                     <div class="card-text">
+                         <div class="card">
+                             <div class="card-body p-0 m-0">
+                                 <ul class="list-group">
+                                     <li class="list-group-item disabled bg-light">Cheese</li>
+                                     <li class="list-group-item">
+                                         <label for="cheese_amount_data_list" class="form-label">Amount of Cheese</label>
+                                         <input class="form-control" list="cheese_amount" id="cheese_amount_data_list" placeholder="Type to search..." value="Normal">
+                                         <datalist id="cheese_amount">
+                                             <option value="Light">
+                                             <option value="Normal">
+                                             <option value="Extra">
+                                             <option value="Double">
+                                         </datalist>
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+                         <br>
+                         <div class="card">
+                             <div class="card-body p-0 m-0">
+                                 <ul class="list-group">
+                                     <li class="list-group-item disabled bg-light">Sauce</li>
+                                     <li class="list-group-item">
+                                         <label for="sauce_type_data_list" class="form-label">Type of Sauce</label>
+                                         <input class="form-control" list="sauce_type" id="sauce_type_data_list" placeholder="Type to search..." value="Tomato">
+                                         <datalist id="sauce_type">
+                                             <option value="Tomato">
+                                             <option value="Marinara">
+                                             <option value="BBQ">
+                                             <option value="Alfredo">
+                                         </datalist>
+                                     </li>
+                                     <li class="list-group-item">
+                                         <label for="sauce_amount_data_list" class="form-label">Amount of Sauce</label>
+                                         <input class="form-control" list="sauce_amount" id="sauce_amount_data_list" placeholder="Type to search..." value="Normal">
+                                         <datalist id="sauce_amount">
+                                             <option value="Light">
+                                             <option value="Normal">
+                                             <option value="Extra">
+                                         </datalist>
+                                     </li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="card-footer">
+                     <a href="#" class="btn btn-primary next-btn mx-3" style="float: right;" role="button" id="second-tab-next">Next Step ></a>
+                     <a href="#" class="btn btn-primary next-btn" style="float: right;" role="button" id="second-tab-prev">< Previous Step</a>
                  </div>
              </div>
-             <!-- Cheese and Sauce Card ends -->
          </div>
+             <!-- Cheese and Sauce Card ends -->
 
          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
              <!-- Toppings Card -->
-             <div class="card" style="width: 18rem;">
-                 <img src="..." class="card-img-top" alt="...">
-                 <div class="card-body">
-                     <h5 class="card-title">Card title</h5>
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+             <div class="card">
+                 <div class="card-header p-0 m-0">
+                     <div class="navbar p-3 bg-primary text-light">Choose Toppings</div>
                  </div>
-                 <ul class="list-group list-group-flush">
-                     <li class="list-group-item">An item</li>
-                     <li class="list-group-item">A second item</li>
-                     <li class="list-group-item">A third item</li>
-                 </ul>
-                 <div class="card-body">
-                     <a href="#" class="card-link">Card link</a>
-                     <a href="#" class="card-link">Another link</a>
-                 </div>
-             </div>
+                 <div class="card-body p-2">
+                     <p class="card-text">
+                     <div class="card">
+                         <div class="card-body m-0 p-0">
+                             <ul class="list-group">
+                                 <li class="list-group-item disabled bg-light">Choose Meats</li>
+                                 <li class="list-group-item">
+                                     <div class="form-check">
+                                         <input class="form-check-input" type="checkbox" value="" id="beef_check">
+                                         <label class="form-check-label" for="beef_check">
+                                             Beef
+                                         </label>
+                                     </div>
+                                 </li>
+                                 <li class="list-group-item">
+                                     <div class="form-check">
+                                         <input class="form-check-input" type="checkbox" value="" id="ham_check">
+                                         <label class="form-check-label" for="ham_check">
+                                             Ham
+                                         </label>
+                                     </div>
+                                 </li>
+                                 <li class="list-group-item">
+                                     <div class="form-check">
+                                         <input class="form-check-input" type="checkbox" value="" id="philly_steak_check">
+                                         <label class="form-check-label" for="philly_steak_check">
+                                             Philly Steak
+                                         </label>
+                                     </div>
+                                 </li>
+                                 <li class="list-group-item">
+                                     <div class="form-check">
+                                         <input class="form-check-input" type="checkbox" value="" id="bacon_check">
+                                         <label class="form-check-label" for="bacon_check">
+                                             Bacon
+                                         </label>
+                                     </div>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
              <!-- Toppings Card ends -->
          </div>
      </div>
-
-
-<!--     Cards-->
-
-
  </div>
 
 
