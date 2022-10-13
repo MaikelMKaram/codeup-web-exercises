@@ -48,12 +48,11 @@
         // TODO: Set text color of li with dbid = 1 to blue
 
         for (let i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute('data-dbid') === '1') {
-                listItems[i].style.color = "blue";
-                continue;
-            }
             if (i % 2 !== 0) {
                 listItems[i].style.color = "grey";
+                continue;
+            } if (listItems[i].getAttribute('data-dbid') === '1') {
+                listItems[i].style.color = "blue";
             }
         }
 
@@ -61,6 +60,9 @@
          var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
+        subParagraphs[0].innerText = "Mission Accomplished!";
+
 
     })();
 </script>
