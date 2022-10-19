@@ -19,7 +19,7 @@
 </nav>
 
 <!-- Header -->
-<header id="name" class="header">
+<header id="title" class="name">
     <h1>Maikel M. Karam</h1>
 
 </header>
@@ -27,8 +27,8 @@
 <!-- Main -->
 <main>
     <div id="container" class="class1">
-        <p id="paragraph" class="class2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta enim fugiat iste praesentium rem. A alias, aspernatur aut consectetur culpa in ipsam nam nemo nisi, non quidem quo quod voluptates!</p>
-        <ul id="list" class="listClass">
+        <p id="paragraph1" class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta enim fugiat iste praesentium rem. A alias, aspernatur aut consectetur culpa in ipsam nam nemo nisi, non quidem quo quod voluptates!</p>
+        <ul id="list" class="codeup">
             <li>A</li>
             <li>B</li>
             <li>C</li>
@@ -55,13 +55,17 @@
 <script src="index.js"></script>
 
 <script>
-    "use strict";
-    $(function() {
-        alert( 'The DOM has finished loading!' );
-    });
 
-    let contents = $('#container').html();
-    alert(contents);
+    "use strict";
+    // $(function() {
+    //     alert( 'The DOM has finished loading!' );
+    // });
+
+    // let contents = $('#list').html();
+    // alert(contents);
+
+    $('.codeup').css('border','red 1px solid');
+
 </script>
 
 </body>
