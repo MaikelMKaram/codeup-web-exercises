@@ -25,12 +25,16 @@
 function konamiCode (){
     let code = '3838404037393739666513';
     let input = '';
-    let audio = new Audio('01 Contra (Title).mp3');
+    let audio = new Audio('mp3/01 Contra (Title).mp3');
     $(document).keyup(function (event){
         input += ("" + event.keyCode);
         if (input == code) {
-            alert("You have added 30 lives");
+            $('body').css({
+                'background-image':'url(img/doge.png)',
+                'background-size': 'cover',
+            });
             audio.play();
+            alert("You have added 30 lives");
         }
     })
 }
@@ -41,5 +45,3 @@ konamiCode();
 
 </body>
 </html>
-
-<!--38-38-40-40-37-39-37-39-66-65-13-->
