@@ -5,14 +5,41 @@
 </head>
 <body>
 <h1>Konami Code</h1>
+<!-- JQuery-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
+<!-- JS-->
 <script src="/js/jquery.js"></script>
+
 <script>
     "use strict";
+
+// keyCode console log
 
     $(document).keyup(function(event){
         console.log(event.keyCode);
     });
+
+// konamiCode Function
+
+function konamiCode (){
+    let code = '3838404037393739666513';
+    let input = '';
+    let audio = new Audio('01 Contra (Title).mp3');
+    $(document).keyup(function (event){
+        input += ("" + event.keyCode);
+        if (input == code) {
+            alert("You have added 30 lives");
+            audio.play();
+        }
+    })
+}
+konamiCode();
+
+
 </script>
+
 </body>
 </html>
+
+<!--38-38-40-40-37-39-37-39-66-65-13-->
