@@ -14,8 +14,8 @@
         .invisible {
             visibility: hidden;
         }
-        .yellow {
-            background-color: yellow
+        .highlight {
+            background-color: lightblue;
         }
     </style>
 </head>
@@ -89,6 +89,13 @@
     $('#description').click(function (e){
         $('dd').toggle('display').toggleClass('invisible');
     })
+
+    function highlight(){
+        $('dt').click(function (){
+            $(this).toggleClass("highlight");
+        })
+    }
+    highlight();
 </script>
 
 
