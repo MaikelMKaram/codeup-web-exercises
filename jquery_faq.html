@@ -26,6 +26,10 @@
         .boldFont{
             font-weight: bold;
         }
+
+        .blue {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -154,7 +158,10 @@ $('h3').click(function(){
     $(this).next('ul').children('li').toggleClass('boldFont');
 })
 
-
+// h3 list bolding
+$('li').click(function(){
+    $(this).parent('ul').children('li').first('li').toggleClass('blue');
+})
 </script>
 
 
