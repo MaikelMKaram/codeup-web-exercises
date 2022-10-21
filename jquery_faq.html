@@ -33,8 +33,10 @@
 <main>
     <h2>LOTR Races</h2>
 
-    <button id="description" type="button">Show Descriptions</button>
+<!--    Toggle All button-->
+    <button id="description" type="button">Toggle All</button>
 
+<!--    Description List-->
     <dl>
         <dt>Hobbits</dt>
         <dd class="invisible">Manlets. Tiny, weak, not suited for fighting. Like to party.</dd>
@@ -60,7 +62,7 @@
         <dt>Dwarves</dt>
         <dd class="invisible">A better, stronger version of the noodle-armed Hobbits. Very stout, much durable, pure chad. Lift weights and hate evil. Good for yeeting at enemies.</dd>
 
-        <dt>Evles</dt>
+        <dt>Elves</dt>
         <dd class="invisible">Super old race, cool armor, can't die from old age. Maxed out speed and reflex stats, but have never lifted a weight. Also hate evil. Men have girly-looking hair.</dd>
 
         <dt>Men</dt>
@@ -90,12 +92,11 @@
         $('dd').toggle('display').toggleClass('invisible');
     })
 
-    function highlight(){
-        $('dt').click(function (){
-            $(this).toggleClass("highlight");
-        })
-    }
-    highlight();
+    $('dt').click(function (e){
+        $('dd').removeClass('highlight');
+        $(this).next('dd').toggleClass("highlight");
+        $('dd').toggle('display').toggleClass('invisible');
+    })
 </script>
 
 
