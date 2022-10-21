@@ -14,8 +14,17 @@
         .invisible {
             visibility: hidden;
         }
+
         .highlight {
             background-color: lightblue;
+        }
+
+        .lastFactHighlight{
+            background-color: yellow;
+        }
+
+        .boldFont{
+            font-weight: bold;
         }
     </style>
 </head>
@@ -34,7 +43,7 @@
     <h2>LOTR Races</h2>
 
 <!--    Toggle All button-->
-    <button id="description" type="button">Toggle All</button>
+    <button id="description" type="button">Toggle LOTR</button>
 
 <!--    Description List-->
     <dl>
@@ -69,6 +78,39 @@
         <dd class="invisible">Numerous and well-equipped. Imperfect, unpredictable, and morally flexible, though generally good. Their flexibility plays to their strength. Played the biggest part in defeating Sauron. Pretty much the vanilla JS of the LOTR universe. </dd>
     </dl>
 
+<!--    National Park lists-->
+    <button id="highlightLast" type="button">Highlight Last Fact</button>
+
+    <div>
+        <h3>Yellowstone National Park</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Grand Canyon National Park</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Arches National Park</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+    </div>
+
 </main>
 
 <!-- Footer -->
@@ -87,16 +129,32 @@
 
 <!-- Script-->
 <script>
+<!--    LOTR  toggle-->
     $('dd').toggleClass('invisible');
     $('#description').click(function (e){
         $('dd').toggle('display').toggleClass('invisible');
     })
 
+//LOTR highlight
     $('dt').click(function (e){
         $('dd').removeClass('highlight');
         $(this).next('dd').toggleClass("highlight");
-        $('dd').toggle('display').toggleClass('invisible');
+        $(this).next('dd').toggle('display').toggleClass('invisible');
     })
+
+//highlight last item on lists
+    $('#highlightLast').click(function (){
+        $('ul').each(function (){
+            $(this).children('li').last().toggleClass('lastFactHighlight');
+        })
+    })
+
+// h3 list bolding
+$('h3').click(function(){
+    $(this).next('ul').children('li').toggleClass('boldFont');
+})
+
+
 </script>
 
 
