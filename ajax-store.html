@@ -20,6 +20,8 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<input type="button" value="Update" onclick="loadIventory()">
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -28,6 +30,7 @@
         // TODO: Create an AJAX GET request for the file under data/inventory.json
         $.ajax('data/inventory.json').done(function (data){
             console.log(data);
+            $('#insertProducts').empty();
             data.forEach(function(item){
                 let html="";
                 html += "<tr>";
