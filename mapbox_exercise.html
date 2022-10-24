@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        #map{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!--Geocoder-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!-- -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+<!-- -->
+<script>
+    const key = "pk.eyJ1IjoibWFpLWthIiwiYSI6ImNsOW41N2E1ZDAxZDYzdm84cnpwd3c4ZXEifQ.4T_4IwYC9IRcS6U3zTZI_A";
+
+    mapboxgl.accessToken = key;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        //TODO: Set your own zoom and center
+        zoom: 10,
+        center: [-86.80541779251777, 33.404339086319375],
+    });
+
+    //TODO: Set zoom on your own with a map.setZoom call in your console
+
+    //TODO: Add your own marker to where we've aligned your map so far
+    let marker = new mapboxgl.Marker()
+    .setLngLat([-86.80541779251777, 33.404339086319375])
+    .addTo(map)
+
+    //TODO: Use the geocode method to add a 2nd marker and popup to your map, then center your map over it
+    let popup = new mapboxgl.Popup()
+        .setLngLat([-86.80300625318547, 33.40100149894412])
+        .setHTML("<p>Golden Corral</p>")
+        .addTo(map)
+
+    //TODO: Try a reverse geocode yourself and see what address you get back for your coordinates - remember to send up a {lng: <lng>, lat: <lat>} object
+
+    geocode("2334 Crossgate Trail", key).then(function(result){
+        console.log(result)
+
+        let marker2 = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map)
+    })
+
+    reverseGeocode({lng: , lat:}, key).then(function (result){
+        alert(result)
+    })
+
+</script>
+</body>
+</html>
