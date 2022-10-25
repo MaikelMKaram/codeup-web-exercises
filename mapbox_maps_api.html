@@ -37,6 +37,7 @@
 <script src="js/mapbox-geocoder-utils.js"></script>
 
 <script>
+//Generate a map that shows the city with your favorite restaurant using geocoding
     const key = "pk.eyJ1IjoibWFpLWthIiwiYSI6ImNsOW41N2E1ZDAxZDYzdm84cnpwd3c4ZXEifQ.4T_4IwYC9IRcS6U3zTZI_A";
 
     mapboxgl.accessToken = key;
@@ -51,16 +52,59 @@
         map.setFog({}); // Set the default atmosphere style
     });
 
-//Generate a map that shows the city with your favorite restaurant using geocoding.
+// Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.
+//Create a popup with the name of the restaurant.
     geocode("2801 John Hawkins Pkwy, hoover, al, 35244", key).then(function(result){
         console.log(result);
 
+        let popup = new mapboxgl.Popup()
+            .setLngLat([-86.82471065921101, 33.365432202034775])
+            .setHTML("<p>Pita Cafe</p>")
+            // .addTo(marker)
+
         let marker = new mapboxgl.Marker()
             .setLngLat(result)
-            .addTo(map)
+            .addTo(map).setPopup(
+                popup
+            )
     })
 
-</script>
+//Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
 
+let favoriteRestaurants = [
+    {
+        name: "First Watch",
+        Location: "4741 Chase Cirl, Birmingham, AL 35244",
+        popupHTML: "<a href=\https://www.firstwatch.com/locations/hoover/><b>firstwatch.com/location/hoover</b></a>"
+    },
+    {
+        name: "Pita  Cafe",
+        Location: "2801 John Hawkins Pkwy, hoover, al, 35244",
+        popupHTML: "<a href=\https://pitacafehoover.com/><b>pitacafehoover.com</b></a>"
+    },
+    {
+        name: "Vecchia Pizzeria & Mercato",
+        Location: "610 Preserve Pkwy Suite 100, Hoover, AL 35226",
+        popupHTML: "<a href=\https://www.vecchiabirmingham.com/><b>vecchiabirmingham.com</b></a>"
+    }
+]
+
+function restaurantPopups(rest,token,map){
+        rest.forEach(function (x){
+            geocode(x.Location, key).then(function (coordinates){
+                var popup = new mapboxgl.Popup()
+                    .setHTML(x.popupHTML);
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map)
+                    .setPopup(popup)
+                popup.addTo(map);
+            })
+        })
+}
+
+restaurantPopups(favoriteRestaurants,key,map);
+
+</script>
 </body>
 </html>
