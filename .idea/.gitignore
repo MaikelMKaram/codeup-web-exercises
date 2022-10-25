@@ -6,4 +6,6 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-js/api-key.js
+
+/Users/mikekaram/IdeaProjects/codeup-web-exercises/js/api-key.js
+api-key.js
