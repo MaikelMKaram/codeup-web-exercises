@@ -35,10 +35,12 @@
 
 <!-- Geocoder JS -->
 <script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/api-key.js">
+</script>
 
 <script>
 //Generate a map that shows the city with your favorite restaurant using geocoding
-    const key = "pk.eyJ1IjoibWFpLWthIiwiYSI6ImNsOW41N2E1ZDAxZDYzdm84cnpwd3c4ZXEifQ.4T_4IwYC9IRcS6U3zTZI_A";
+
 
     mapboxgl.accessToken = key;
     const map = new mapboxgl.Map({
@@ -75,17 +77,17 @@ let favoriteRestaurants = [
     {
         name: "First Watch",
         Location: "4741 Chase Cirl, Birmingham, AL 35244",
-        popupHTML: "<a href=\https://www.firstwatch.com/locations/hoover/><b>firstwatch.com/location/hoover</b></a>"
+        popupHTML: "<a href=\https://www.firstwatch.com/locations/hoover/><b>firstwatch.com/location/hoover</b></a><br><p>Best brunch in town</p>"
     },
     {
         name: "Pita  Cafe",
         Location: "2801 John Hawkins Pkwy, hoover, al, 35244",
-        popupHTML: "<a href=\https://pitacafehoover.com/><b>pitacafehoover.com</b></a>"
+        popupHTML: "<a href=\https://pitacafehoover.com/><b>pitacafehoover.com</b></a><p>favorite dish: Lamb Kabob w/ tab and a side of ff</p>"
     },
     {
         name: "Vecchia Pizzeria & Mercato",
         Location: "610 Preserve Pkwy Suite 100, Hoover, AL 35226",
-        popupHTML: "<iframe src=\https://www.vecchiabirmingham.com/></iframe>"
+        popupHTML: "<iframe src=\https://www.vecchiabirmingham.com/></iframe><br><p>Best Pizza in Town</p>"
     }
 ]
 
