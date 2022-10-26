@@ -93,13 +93,13 @@
                     pressure = x.main.pressure;
 
                     let html = "";
-                    html += '<div class="col card-header"><p class="mb-4 card-header">' + date + "</p>";
-                    html += '<p class="mb-2">' + tempMin + '˚F' + ' | ' + tempMax + '˚F' + '</p>';
+                    html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date +"</strong>" + "</p>";
+                    html += '<p class="mb-2">' + "<strong>" + tempMin +"</strong>" + '˚F' + ' | ' + "<strong>" + tempMax +"</strong>" + '˚F' + '</p>';
                     html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
                     html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
-                    html += '<p class="mb-2">' + 'Humdidity: ' + humidity + '</p>';
-                    html += '<p class="mb-2"> ' + 'Wind: ' + wind + '</p>';
-                    html += '<p>' + 'Pressure: ' + pressure + '</p>'
+                    html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
+                    html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
+                    html += '<p>' + 'Pressure: ' + "<strong>" + pressure + "</strong>" + '</p>';
                     html += '</div>';
 
                     $('.row').append(html);
