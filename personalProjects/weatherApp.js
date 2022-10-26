@@ -22,7 +22,7 @@ setInterval(() => {
     const ampm = hour >=12 ? 'PM' : 'AM'
 
     //Time Element
-    timeElement.innerHTML = hoursIn12HrFormat + ":" + minutes +  " " + ampm
+    timeElement.innerHTML = hoursIn12HrFormat + ":" + (minutes>=9 ? minutes:"0" + minutes) +  " " + ampm
     //Date Element
     dateElement.innerHTML = `${days[day]}, ${date} ${months[month]}`
 }, 1000)
