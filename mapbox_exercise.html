@@ -48,8 +48,6 @@
     //TODO: Try a reverse geocode yourself and see what address you get back for your coordinates - remember to send up a {lng: <lng>, lat: <lat>} object
 
     geocode("2334 Crossgate Trail", key).then(function(result){
-        console.log(result)
-
         let marker2 = new mapboxgl.Marker()
             .setLngLat(result)
             .addTo(map)
