@@ -107,11 +107,61 @@
             })
         })
 
-    //   Click Marker
-    // this.marker = new mapboxgl.Marker();
-    // this.map.on('click', this.mainFunction().bind(this),
+     // Click Marker
+    // this.map.onclick(this.mainFunction.bind(this),
     // );
 
+    this.marker = new mapboxgl.Marker();
+        this.map.onclick = function (){
+            mainFunction(this.value);
+            console.log(this)
+        }
+
+    function mainFunction(para){
+            console.log(para)
+            var input = para.lngLat
+        this.marker.setLngLat(input).addTo(this.map);
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/forecast",
+            type: "GET",
+            data: {
+                APPID: weatherKey,
+                lat: input.lat,
+                lng: input.lng,
+                units: "imperial",
+            }
+        }).done(function (data) {
+            //console logs
+            console.log(data);
+
+            data.list.forEach(function (x) {
+                if (x.dt_txt.split(" ")[1] === '00:00:00' && count !== 0) {
+
+                    date = x.dt_txt.split(" ")[0];
+                    tempMax = x.main.temp_max;
+                    tempMin = x.main.temp_min;
+                    icon = x.weather[0].icon;
+                    description = x.weather[0].description;
+                    humidity = x.main.humidity;
+                    wind = x.wind.speed;
+                    pressure = x.main.pressure;
+
+                    let html = "";
+                    html += '<div class="col card-header"><p class="mb-4 card-header">' + date + "</p>";
+                    html += '<p class="mb-2">' + tempMin + '˚F' + ' | ' + tempMax + '˚F' + '</p>';
+                    html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
+                    html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
+                    html += '<p class="mb-2">' + 'Humdidity: ' + humidity + '</p>';
+                    html += '<p class="mb-2"> ' + 'Wind: ' + wind + '</p>';
+                    html += '<p>' + 'Pressure: ' + pressure + '</p>'
+                    html += '</div>';
+
+                    $('.row').append(html);
+                    count--;
+                }
+            })
+        })
+    }
 
 
 
