@@ -19,20 +19,33 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
             <a class="navbar-brand ms-2 fw-bold text-light" href="#">Weather App</a>
-
-
         </nav>
     </div>
 
+<!--   Location navbar -->
+    <div class="container">
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand">Location</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Find</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <!--    Map-->
+    <div class="container">
+        <div id='map' style='width: 100%; height: 500px; margin-bottom: 1rem'></div>
+    </div>
+
 <!--    Row-->
-    <div  class="container">
+    <div  class="container d-flex justify-content-center">
         <div class="row">
         </div>
     </div>
-<!--    Map -->
-    <div class="container">
-    <div id='map' style='width: 100%; height: 500px; margin-top: 5px'></div>
-    </div>
+
 </main>
 
 <!-- JQuery-->
@@ -94,7 +107,7 @@
 
                     let html = "";
                     html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date +"</strong>" + "</p>";
-                    html += '<p class="mb-2">' + "<strong>" + tempMin +"</strong>" + '˚F' + ' | ' + "<strong>" + tempMax +"</strong>" + '˚F' + '</p>';
+                    html += '<p class="mb-2">' + "<strong>" + tempMin + '˚F' + "</strong>" + ' | ' + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
                     html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
                     html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
                     html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
