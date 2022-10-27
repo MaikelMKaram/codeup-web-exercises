@@ -361,7 +361,7 @@ function adminListThree(arr) {
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].isAdmin === true) {
-            newArr.push(arr[i].email);
+            newArr.push(arr[i]);
         }
     }
     return newArr
