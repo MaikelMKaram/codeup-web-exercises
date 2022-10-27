@@ -618,13 +618,24 @@ function removeAll(arr, value){
 //     - `removeAll(bugs, "roach")` should return the original array b/c "roach"
 // has no occurrances.
 //
-// ---
 //
 // - Make a function called randomIntBetween(min, max) that returns a random number
 // between the min and the max.
+function randomIntBetween(min,max){
+    return Math.random() * (max - min) + min;
+}
+
 // - Make a function called `coinFlip()` that returns either 0 or 1, randomly
+
+function  coinFlip(){
+    return Math.round(Math.random());
+}
+
 // - Make a function called `twoDice()` that returns the sum of rolling two six
 // sided dice.
+
+
+
 // - Make a function called `twentySidedDie()` that returns a random integer
 // between 1 and 20.
 // - Make a function called `twelveSidedDie()` that returns a random integer
@@ -632,7 +643,9 @@ function removeAll(arr, value){
 // - Make a function called `tetrahedron()` that returns a random integer between 1
 // and 4.
 //
-// ---
+
+
+
 //
 // - Make a function called `rollDie()` that returns an integer between 1 and 6.
 // - Make a function called `listOfRolls(num)` that takes in a number containing
