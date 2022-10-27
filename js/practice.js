@@ -413,8 +413,8 @@ console.log(adminList(arrOfObjThree));
 //             }
 //         ]
 //
-// 1. Create a function, `makeSandwhichObjects()` that takes in two array of
-// strings, breads and fillings and returns an array of `sandwhichObjects` that
+// 1. Create a function, `makeSandwichObjects()` that takes in two array of
+// strings, breads and fillings, and returns an array of `sandwichObjects` that
 // contain properties for bread and filling and values correspond to the same
 // order of the two passed in arrays. Assume the two array inputs are the same
 // length.
@@ -428,13 +428,13 @@ var breads  = [
     "rhy",
     "white"
 ];
-​
-    var fillings = [
-        "pb&j",
-        "ham",
-        "cheese steak",
-        "tuna"
-    ];
+
+var fillings = [
+    "pb&j",
+    "ham",
+    "cheese steak",
+    "tuna"
+];
 function makeSandwhichObjects(arr1, arr2){
     let arrOfObj = []
     for (let i = 0; i < arr1.length; i++) {
@@ -470,3 +470,193 @@ console.log(makeSandwhichObjects(breads, fillings));
 //         filling: "tuna"
 //     }
 // ]
+
+
+// ## OBJECTS BONUSES
+//
+// 1. Create a dog object
+//
+//     The dog object should have properties for:
+//
+//     - `breed` (string),
+//         - `weightInPounds` (number),
+//         - `age` (number),
+//         - `color` (string),
+//         - `sterilized` (boolean),
+//         - `shotRecords` (array of objects with properties for date and `typeOfShot`)
+//
+//     The dog object should have methods to:
+//
+// - `bark()` - will console.log "Woof!"
+// - `getOlder()` - will increase age by 1
+// - `fix()` - will set sterile to true if dog sterilized property is false
+// - `vaccinate()` - takes in an argument for the name of the shot and adds a
+// new shot with the current date to the shotRecords array
+//
+// 1. Expanding on the books object exercise:
+//
+// - Add a property `keywords` that contains an array of possible genres the
+// book may be categorized by
+// - Add a boolean property `available` and set it to true
+// - Add a `dateAvailable` property that has a string of the date/time when the
+// book will be available
+// - Add a method `lend()` that...
+// - changes the `available` property to false if it is not already false
+// - sets the `dateAvailable` to a date exactly two weeks from when the
+//     `lend()` method is called (to do this, research the JS Date object and
+// use methods from it in your code)
+// Add a method `receive()` that...
+// - changes the `available` property to true
+// - changes the `dateAvailable` property to the string `"now"`
+//
+// 1. Expanding on the books object exercise:
+//
+// - Create an application to take in user input to build the books array of objects.
+// - Allow the user to continue adding books or to finish adding books.
+// - Once the books have been added, output the books array in the console.
+// - Allow a user to delete a book or a group of books by title or author last name
+// - Allow a user to edit a book by index number in the books array
+//
+//
+//
+// 1. Define an object called `jackBox`
+//
+//     Include properties for...
+//
+//     - `triggered` - whether or not the box has been sprung (should be false by
+// default)
+// - `intervalId` - set to null
+// - `play()` - once called, if triggered is false, console.log one new element
+// in the lyrics array every second after the lyrics, stop the interval, set
+// the triggered property to true, and alert POP!
+//     - `windUp()` - once called will stop the play() method and set triggered to
+// false lyrics - an array with the following elements:
+//
+// "All a-...",
+//     "-round the ...",
+//     "mulberry...",
+//     "bush, The...",
+//     "monkey...",
+//     "chased the...",
+//     "wea-...",
+//     "-sel...",
+//     "The monkey...",
+//     "stopped to...",
+//     "pull up his...",
+//     "sock,...",
+//     "Pop!...",
+//     "goes the...",
+//     "wea-...",
+//     "-sel."
+//
+//     When running, current lyrics should also be displayed on the page.
+//
+// 1. Build a Stop Watch
+//
+//     Define an object called `stopWatch`.
+//
+//     Include the following properties...
+//
+//     - `intervalId`
+//     - `count`
+//
+//     Include the following methods...
+//
+//     `start()` - starts console logging an increasing count every second
+//     `pause()` - pauses counter
+//     `reset()` - stops counter and resets count to zero
+
+
+// - Define a function named `allIndexesOf` that takes in two arguments. The first
+// argument should be the array to search and the second argument should be the
+// value you want to search for. If the item does not exist in the provided
+// array, return an empty array.
+//
+//     Given:
+//
+// ```js
+//     var fruits = ["apple", "banana", "orange", "apple", "pineapple"];
+//     ```
+//
+//     - `allIndexesOf(fruits, "apple")` should return the array [0, 3]
+// - `allIndexesOf(fruits, "guava")` should return the array []
+// - `allIndexesOf(fruits, "pineapple")` should return [4]
+
+function allIndexesOf(arr,value){
+    let newArr = [];
+    for (let i =0; i = arr.length; i++){
+        if(arr[i] === value) {
+            newArr.push(i);
+        }
+    } return newArr
+}
+
+
+// - Define a function named `removeAll(array, value)` that takes in two arguments.
+//     The first argument should be an array and the second argument should be a
+// value you wish to remove
+//
+//     Given:
+//
+// ```js
+//     var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+
+function removeAll(arr, value){
+    let newArr = [];
+    for (let i=0; i < arr.length; i++){
+        if (arr[i] !== value){
+            newArr.push(arr[i]);
+        }
+    } return newArr;
+}
+
+
+//     - `removeAll(bugs, "ant")` should return `["mosquito", "scorpion",
+//       "mosquito", "typo", "reference error", "type error"]`
+//     - `removeAll(bugs, "mosquito")` should return `["ant", "scorpion", "ant",
+//       "ant", "typo", "reference error", "type error"]`
+//     - `removeAll(bugs, "roach")` should return the original array b/c "roach"
+// has no occurrances.
+//
+// ---
+//
+// - Make a function called randomIntBetween(min, max) that returns a random number
+// between the min and the max.
+// - Make a function called `coinFlip()` that returns either 0 or 1, randomly
+// - Make a function called `twoDice()` that returns the sum of rolling two six
+// sided dice.
+// - Make a function called `twentySidedDie()` that returns a random integer
+// between 1 and 20.
+// - Make a function called `twelveSidedDie()` that returns a random integer
+// between 1 and 12.
+// - Make a function called `tetrahedron()` that returns a random integer between 1
+// and 4.
+//
+// ---
+//
+// - Make a function called `rollDie()` that returns an integer between 1 and 6.
+// - Make a function called `listOfRolls(num)` that takes in a number containing
+// how many 6-sided dice rolls you want to make. The `listOfRolls` function
+// should return an array of that length, where each element of the array is the
+// result of the `rollDie` function.
+//
+// - Make a function called `listOfRollsFromDieFunc(numberOfRolls, diceFunction)`
+//
+//     This function should take in two arguments:
+//
+// - The first argument is the number of rolls you want to make.
+// - The second argument is a function that contains the function definition
+// for the type of die you want to roll.
+//
+//     For example, if we call `listOfDieRollsFromDieFunc(1, tetrahedron)`, then the
+// function will return an array containing one value that is the result of
+// calling the `tetrahedron` function.
+//
+// ---
+//
+// ```js
+//
+// /**
+//  * JS Array Practice
+//  * Intermediate Array practice: array creation, iteration, and manipulation
+//  */
