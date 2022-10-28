@@ -1,5 +1,23 @@
 mapboxgl.accessToken = key;
 
+
+currentPositionCentering();
+function currentPositionCentering(){
+    navigator.geolocation.getCurrentPosition((success) => {
+        console.log(success);
+        let {latitude, longitude} = success.coords;
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: success.coords,
+            zoom: 4,
+            projection: 'globe'
+        });
+    })
+}
+
+
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',

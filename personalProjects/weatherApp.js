@@ -9,6 +9,8 @@ const currentTempElement = document.getElementById('current-temp');
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
+const key = weatherApp_API;
+
 //Interval function Updates every 1 min
 setInterval(() => {
     // Declarations
@@ -26,3 +28,27 @@ setInterval(() => {
     //Date Element
     dateElement.innerHTML = `${days[day]}, ${date} ${months[month]}`
 }, 1000)
+
+getWeatherData();
+function getWeatherData(){
+    navigator.geolocation.getCurrentPosition((success) => {
+        console.log(success);
+    let {latitude, longitude} = success.coords;
+
+        let count = 5;
+        let coordinates = e.lngLat;
+        let address = e.target.value;
+        var input = coordinates
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/forecast",
+            type: "GET",
+            data: {
+                appid: weatherApp_API,
+                lat: coordinates.lat,
+                lon: coordinates.lng,
+                units: "imperial",
+            }
+        })
+
+    })
+}

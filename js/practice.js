@@ -448,123 +448,6 @@ function makeSandwhichObjects(arr1, arr2){
     return arrOfObj
 }
 console.log(makeSandwhichObjects(breads, fillings));
-//     ```
-//
-//     Example Output:
-//
-// [
-//     {
-//         bread: "white,
-//         filling: "pb&j"
-//     },
-//     {
-//         bread: "wheat",
-//         filling: "ham"
-//     },
-//     {
-//         bread: "rhy",
-//         filling: "cheese steak"
-//     },
-//     {
-//         bread: "white",
-//         filling: "tuna"
-//     }
-// ]
-
-
-// ## OBJECTS BONUSES
-//
-// 1. Create a dog object
-//
-//     The dog object should have properties for:
-//
-//     - `breed` (string),
-//         - `weightInPounds` (number),
-//         - `age` (number),
-//         - `color` (string),
-//         - `sterilized` (boolean),
-//         - `shotRecords` (array of objects with properties for date and `typeOfShot`)
-//
-//     The dog object should have methods to:
-//
-// - `bark()` - will console.log "Woof!"
-// - `getOlder()` - will increase age by 1
-// - `fix()` - will set sterile to true if dog sterilized property is false
-// - `vaccinate()` - takes in an argument for the name of the shot and adds a
-// new shot with the current date to the shotRecords array
-//
-// 1. Expanding on the books object exercise:
-//
-// - Add a property `keywords` that contains an array of possible genres the
-// book may be categorized by
-// - Add a boolean property `available` and set it to true
-// - Add a `dateAvailable` property that has a string of the date/time when the
-// book will be available
-// - Add a method `lend()` that...
-// - changes the `available` property to false if it is not already false
-// - sets the `dateAvailable` to a date exactly two weeks from when the
-//     `lend()` method is called (to do this, research the JS Date object and
-// use methods from it in your code)
-// Add a method `receive()` that...
-// - changes the `available` property to true
-// - changes the `dateAvailable` property to the string `"now"`
-//
-// 1. Expanding on the books object exercise:
-//
-// - Create an application to take in user input to build the books array of objects.
-// - Allow the user to continue adding books or to finish adding books.
-// - Once the books have been added, output the books array in the console.
-// - Allow a user to delete a book or a group of books by title or author last name
-// - Allow a user to edit a book by index number in the books array
-//
-//
-//
-// 1. Define an object called `jackBox`
-//
-//     Include properties for...
-//
-//     - `triggered` - whether or not the box has been sprung (should be false by
-// default)
-// - `intervalId` - set to null
-// - `play()` - once called, if triggered is false, console.log one new element
-// in the lyrics array every second after the lyrics, stop the interval, set
-// the triggered property to true, and alert POP!
-//     - `windUp()` - once called will stop the play() method and set triggered to
-// false lyrics - an array with the following elements:
-//
-// "All a-...",
-//     "-round the ...",
-//     "mulberry...",
-//     "bush, The...",
-//     "monkey...",
-//     "chased the...",
-//     "wea-...",
-//     "-sel...",
-//     "The monkey...",
-//     "stopped to...",
-//     "pull up his...",
-//     "sock,...",
-//     "Pop!...",
-//     "goes the...",
-//     "wea-...",
-//     "-sel."
-//
-//     When running, current lyrics should also be displayed on the page.
-//
-// 1. Build a Stop Watch
-//
-//     Define an object called `stopWatch`.
-//
-//     Include the following properties...
-//
-//     - `intervalId`
-//     - `count`
-//
-//     Include the following methods...
-//
-//     `start()` - starts console logging an increasing count every second
-//     `pause()` - pauses counter
-//     `reset()` - stops counter and resets count to zero
 
 
 // - Define a function named `allIndexesOf` that takes in two arguments. The first
@@ -591,7 +474,6 @@ function allIndexesOf(arr,value){
     } return newArr
 }
 
-
 // - Define a function named `removeAll(array, value)` that takes in two arguments.
 //     The first argument should be an array and the second argument should be a
 // value you wish to remove
@@ -611,14 +493,7 @@ function removeAll(arr, value){
 }
 
 
-//     - `removeAll(bugs, "ant")` should return `["mosquito", "scorpion",
-//       "mosquito", "typo", "reference error", "type error"]`
-//     - `removeAll(bugs, "mosquito")` should return `["ant", "scorpion", "ant",
-//       "ant", "typo", "reference error", "type error"]`
-//     - `removeAll(bugs, "roach")` should return the original array b/c "roach"
-// has no occurrances.
-//
-//
+
 // - Make a function called randomIntBetween(min, max) that returns a random number
 // between the min and the max.
 function randomIntBetween(min,max){
@@ -629,47 +504,67 @@ function randomIntBetween(min,max){
 
 function  coinFlip(){
     return Math.round(Math.random());
+    return math.floor(math.random() + 0.5);
 }
 
-// - Make a function called `twoDice()` that returns the sum of rolling two six
-// sided dice.
+// // Exercise 0. Write a function named first() that returns only the first element of an array
+function first(array) {
+    return array[0]
+}
+console.log(first(bugs));
+// // Exercise 1. Write a function named secondToLast() that returns the second to last element
+function secondToLast(array) {
+    return array[array.length - 2]
+}
+console.log(secondToLast(bugs));
+// // Exercise 2. Write a function named rest() that takes an an array and returns an array containing everything except the first element.
+function rest(array) {
+    array.shift()
+    return array
+}
+console.log(rest(bugs));
+// // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array
+function getLongestString(array) {
+    return (array.sort((a,b) => a.length - b.length))[array.length - 1]
+}
+console.log(getLongestString(bugs))
+// // Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.
+function getShortestString(array) {
+    return (array.sort((a,b) => a.length - b.length))[0]
+}
+console.log(getShortestString(bugs));
+// // Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
+// // Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]
+function addTwoArrays(array1, array2) {
+    // return array1.concat(array2)
+    return [...array1, ...array2]
+}
+console.log(addTwoArrays(bugs, fruits));
+// // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
+// // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
+function getUniqueValues(array1, array2) {
+    let concatArr = array1.concat(array2)
+    let uniqueArray = [...new Set(concatArr)]
+    return uniqueArray
+}
+console.log(getUniqueValues(bugs, fruits));
+// // Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed, but without altering the original array.
+function reverseArray(array) {
+    return array.slice().reverse()
+}
+console.log(reverseArray(bugs));
 
-
-
-// - Make a function called `twentySidedDie()` that returns a random integer
-// between 1 and 20.
-// - Make a function called `twelveSidedDie()` that returns a random integer
-// between 1 and 12.
-// - Make a function called `tetrahedron()` that returns a random integer between 1
-// and 4.
+// ## Loops & Arrays
 //
-
-
-
-//
-// - Make a function called `rollDie()` that returns an integer between 1 and 6.
-// - Make a function called `listOfRolls(num)` that takes in a number containing
-// how many 6-sided dice rolls you want to make. The `listOfRolls` function
-// should return an array of that length, where each element of the array is the
-// result of the `rollDie` function.
-//
-// - Make a function called `listOfRollsFromDieFunc(numberOfRolls, diceFunction)`
-//
-//     This function should take in two arguments:
-//
-// - The first argument is the number of rolls you want to make.
-// - The second argument is a function that contains the function definition
-// for the type of die you want to roll.
-//
-//     For example, if we call `listOfDieRollsFromDieFunc(1, tetrahedron)`, then the
-// function will return an array containing one value that is the result of
-// calling the `tetrahedron` function.
-//
-// ---
-//
-// ```js
-//
-// /**
-//  * JS Array Practice
-//  * Intermediate Array practice: array creation, iteration, and manipulation
-//  */
+// 1.  create an array of shapes
+//     – prompt the user to search for a specific shape
+//     – using a for loop, iterate through the array to log the shapes until the matching shape is found
+//     – once the shape is found, log a message (“Shape is found”) and use a break statement to exit loop.
+let shapes = ["circle", "square", "triangle", "rectangle", "diamond"]
+function findShape (arr, target) {
+    for (let i = 0; i < arr.length; i++)
+        if (arr[i] === target) {
+            console.log("shape is found")
+            break
+        }
+}
