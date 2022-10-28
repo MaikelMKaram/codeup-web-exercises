@@ -1,34 +1,21 @@
 mapboxgl.accessToken = key;
 
-
-currentPositionCentering();
-function currentPositionCentering(){
-    navigator.geolocation.getCurrentPosition((success) => {
-        console.log(success);
-        let {latitude, longitude} = success.coords;
-
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: success.coords,
-            zoom: 4,
-            projection: 'globe'
-        });
-    })
-}
-
-
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
+    // center: [cLong, cLat],
     center: [-86.80541779251777, 33.404339086319375],
-    zoom: 4,
+    zoom: 8,
     projection: 'globe'
 });
 
-map.on('style.load', () => {
-    map.setFog({});
-});
+navigator.geolocation.getCurrentPosition((success) => {
+    let {longitude, latitude} = success.coords;
+    console.log(success.coords)
+    let cLong = success.coords.longitude;
+    let cLat = success.coords.latitude;
+    map.flyTo({center:[cLong, cLat]});
+})
 
 let date;
 let tempMax;
