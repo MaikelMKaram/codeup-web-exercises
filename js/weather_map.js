@@ -17,6 +17,7 @@ navigator.geolocation.getCurrentPosition((success) => {
     map.flyTo({center:[cLong, cLat]});
 })
 
+
 let date;
 let tempMax;
 let tempMin;

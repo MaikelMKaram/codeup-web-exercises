@@ -32,23 +32,21 @@ setInterval(() => {
 getWeatherData();
 function getWeatherData(){
     navigator.geolocation.getCurrentPosition((success) => {
-        console.log(success);
-    let {latitude, longitude} = success.coords;
+    let {latitude, longitude} = success;
 
-        let count = 5;
-        let coordinates = e.lngLat;
-        let address = e.target.value;
-        var input = coordinates
-        $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/forecast",
-            type: "GET",
-            data: {
-                appid: weatherApp_API,
-                lat: coordinates.lat,
-                lon: coordinates.lng,
-                units: "imperial",
-            }
+    console.log(success.coords);
+$.ajax({
+        url: "https://api.openweathermap.org/data/2.5/forecast",
+        type: "GET",
+        data: {
+            appid: weatherApp_API,
+            lat: success.coords.latitude,
+            lon: success.coords.longitude,
+            units: "imperial",
+        }
+    }).done(function (data){
+            // data.list;
         })
-
     })
 }
+
