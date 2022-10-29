@@ -42,9 +42,9 @@ $.ajax({
         }
     }).done(function (data){
         console.log(data);
-        $('#currentTemp').replaceWith(`<p>${data.main.temp}</p>`)
-        $('#currentHumidity').replaceWith(`<p>${data.main.humidity}</p>`)
-        // $('#currentWindspeed').replaceWith(`<p>${data.main.humidity}</p>`)
+        $('#currentTemp').replaceWith(`<p>${data.main.temp}</p>`);
+        $('#currentHumidity').replaceWith(`<p>${data.main.humidity}</p>`);
+        $('#currentWindspeed').replaceWith(`<p>${data.wind.speed}</p>`);
         })
     })
 }
