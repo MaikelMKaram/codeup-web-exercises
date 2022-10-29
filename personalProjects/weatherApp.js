@@ -1,10 +1,5 @@
 const timeElement = document.getElementById('time');
 const dateElement = document.getElementById('date');
-const currentWeatherItemsElement = document.getElementById('current-weather-items');
-const timezone = document.getElementById('time-zone');
-const countryElement = document.getElementById('country');
-const weatherForecastElement = document.getElementById('weather-forecast');
-const currentTempElement = document.getElementById('current-temp');
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
@@ -34,9 +29,10 @@ function getWeatherData(){
     navigator.geolocation.getCurrentPosition((success) => {
     let {latitude, longitude} = success;
 
-    console.log(success.coords);
+//    Current Weather Conditions
+
 $.ajax({
-        url: "https://api.openweathermap.org/data/2.5/forecast",
+        url: "https://api.openweathermap.org/data/2.5/weather",
         type: "GET",
         data: {
             appid: weatherApp_API,
@@ -45,7 +41,10 @@ $.ajax({
             units: "imperial",
         }
     }).done(function (data){
-            // data.list;
+        console.log(data);
+        $('#currentTemp').replaceWith(`<p>${data.main.temp}</p>`)
+        $('#currentHumidity').replaceWith(`<p>${data.main.humidity}</p>`)
+        // $('#currentWindspeed').replaceWith(`<p>${data.main.humidity}</p>`)
         })
     })
 }
