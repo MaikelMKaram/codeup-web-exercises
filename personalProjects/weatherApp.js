@@ -29,7 +29,7 @@ mapboxgl.accessToken = mapBoxkey;
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
+    style: 'mapbox://styles/mapbox/dark-v10',
     // center: [cLong, cLat],
     center: [-86.80541779251777, 33.404339086319375],
     zoom: 8,
@@ -38,7 +38,6 @@ var map = new mapboxgl.Map({
 
 navigator.geolocation.getCurrentPosition((success) => {
     let {longitude, latitude} = success.coords;
-    console.log(success.coords)
     let cLong = success.coords.longitude;
     let cLat = success.coords.latitude;
     map.flyTo({center:[cLong, cLat]});
@@ -61,10 +60,9 @@ $.ajax({
             units: "imperial",
         }
     }).done(function (data){
-        console.log(data);
-        $('#currentTemp').replaceWith(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
-        $('#currentHumidity').replaceWith(`<p>${data.main.humidity}</p>`);
-        $('#currentWindspeed').replaceWith(`<p>${data.wind.speed}</p>`);
+        $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
+        $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
+        $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
         })
     })
 }
@@ -89,7 +87,6 @@ function mainFunction(e){
     let address = e.target.value;
     marker.setLngLat(coordinates).addTo(map);
     // var input = coordinates
-
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather",
         type: "GET",
@@ -101,9 +98,9 @@ function mainFunction(e){
         }
     }).done(function (data){
         console.log(data);
-        $('#currentTemp').replaceWith(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
-        $('#currentHumidity').replaceWith(`<p>${data.main.humidity}</p>`);
-        $('#currentWindspeed').replaceWith(`<p>${data.wind.speed}</p>`);
+        $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
+        $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
+        $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
     })
 
     $.ajax({
