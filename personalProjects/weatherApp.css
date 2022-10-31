@@ -27,7 +27,7 @@ body {
 }
 
 .date-container .time{
-    font-size: 70px;
+    color: white;
 }
 
 .date-container #am-pm{

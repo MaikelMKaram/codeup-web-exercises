@@ -51,7 +51,6 @@ function getWeatherData(){
     let {latitude, longitude} = success;
 
 //    Current Weather Conditions
-
 $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather",
         type: "GET",
@@ -89,7 +88,24 @@ function mainFunction(e){
     let coordinates = e.lngLat;
     let address = e.target.value;
     marker.setLngLat(coordinates).addTo(map);
-    var input = coordinates
+    // var input = coordinates
+
+    $.ajax({
+        url: "https://api.openweathermap.org/data/2.5/weather",
+        type: "GET",
+        data: {
+            appid: weatherApp_API,
+            lat: coordinates.lat,
+            lon: coordinates.lng,
+            units: "imperial",
+        }
+    }).done(function (data){
+        console.log(data);
+        $('#currentTemp').replaceWith(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
+        $('#currentHumidity').replaceWith(`<p>${data.main.humidity}</p>`);
+        $('#currentWindspeed').replaceWith(`<p>${data.wind.speed}</p>`);
+    })
+
     $.ajax({
         url: "http://api.openweathermap.org/data/2.5/forecast",
         type: "GET",
@@ -102,7 +118,7 @@ function mainFunction(e){
     }).done(function (data) {
         $('.row').empty();
         data.list.forEach(function (x) {
-            if (x.dt_txt.split(" ")[1] === '00:00:00' && count !== 0) {
+            if (x.dt_txt.split(" ")[1] === '12:00:00' && count !== 0) {
 
                 date = x.dt_txt.split(" ")[0];
                 tempMax = x.main.temp_max;
