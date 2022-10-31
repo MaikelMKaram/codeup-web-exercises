@@ -57,15 +57,14 @@ let averageExperience = userTotalExp / users.length;
 console.log(averageExperience);
 
 //Use .reduce to get the longest email from the list of users.
-// let emails = [];
-// users.forEach(x => emails.push(x.email));
-// console.log(emails);
+let emails = [];
+users.forEach(x => emails.push(x.email));
+console.log(emails);
 let longestEmail = users.reduce((a,b) => {
-    if (a.email.length > b.email.length){
+    if (a.length > b.length){
         return a;
     } else {
         return b;
     }
 }, "").email;
-
 console.log(longestEmail);
