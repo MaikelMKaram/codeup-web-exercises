@@ -88,7 +88,7 @@ function mainFunction(e){
     marker.setLngLat(coordinates).addTo(map);
     map.flyTo({center:coordinates,
         zoom: 8,
-        duration: 4000,
+        duration: 3000,
     });
     // var input = coordinates
     $.ajax({
