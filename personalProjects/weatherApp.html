@@ -26,95 +26,109 @@
 </header>
 
 <!-- Main -->
+
+
+
+
 <main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="time" id="time">
+                    00:00 <span id="am-pm">AM/PM</span>
+                </div>
+                <div class="date" id="date">
+                    Date
+                </div>
+<!--Date/Time/Current-info -->
+                <div class="weather-item">
+                    <p>Temperature</p>
+                    <p id="currentTemp"> --- </p>
+                </div>
+                <div class="weather-item">
+                    <p>Humidity</p>
+                    <p id="currentHumidity"> --- </p>
+                </div>
+                <div class="weather-item">
+                    <p>Wind Speed</p>
+                    <p id="currentWindspeed"> --- </p>
+                </div>
+            </div>
+<!--            Map -->
+            <div class="col-lg-9">
+                <div id='map' style='width: 100%; height: 500px; margin-bottom: 1rem'></div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="container">
         <div class="current-info">
             <div class="date-container">
                 <div class="time" id="time">
-                    12:32 <span id="am-pm">PM</span>
+                    00:00 <span id="am-pm">AM/PM</span>
                 </div>
                 <div class="date" id="date">
-                    Monday, 24 May
-                </div>
-
-                <div class="other" id="current-weather-items">
-                    <div class="weather-item">
-                        <p>Temperature</p>
-                        <p id="currentTemp">25.6&#176; C</p>
-                    </div>
-                    <div class="weather-item">
-                        <p>Humidity</p>
-                        <p id="currentHumidity">95.2</p>
-                    </div>
-                    <div class="weather-item">
-                        <p>Wind Speed</p>
-                        <p id="currentWindspeed">8</p>
-                    </div>
+                    Date
                 </div>
             </div>
-
-            <div class="place-container">
-                <div class="time-zone" id="time-zone">ECT</div>
-                <div id="country" class="class">US</div>
-            </div>
-        </div>
-
-        <div class="future-forecast">
-            <div class="today" id="current-temp">
-                <img src="" alt="weather icon" class="w-icon">
-                <div class="day">Monday</div>
-                <div class="temp">Night - 25.6&#176; C</div>
-                <div class="temp">Day - 35.6&#176; C</div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-                <div class="weather-forecast-item">
-                    <div class="day">Tues</div>
-                    <img src="" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - 25.6&#176; C</div>
-                    <div class="temp">Day - 35.6&#176; C</div>
+            <div class="other" id="current-weather-items">
+                <h4>Current Conditions</h4>
+                <div class="weather-item">
+                    <p>Temperature</p>
+                    <p id="currentTemp"> --- </p>
                 </div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-                <div class="weather-forecast-item">
-                    <div class="day">Tues</div>
-                    <img src="" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - 25.6&#176; C</div>
-                    <div class="temp">Day - 35.6&#176; C</div>
+                <div class="weather-item">
+                    <p>Humidity</p>
+                    <p id="currentHumidity"> --- </p>
                 </div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-                <div class="weather-forecast-item">
-                    <div class="day">Tues</div>
-                    <img src="" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - 25.6&#176; C</div>
-                    <div class="temp">Day - 35.6&#176; C</div>
-                </div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-                <div class="weather-forecast-item">
-                    <div class="day">Tues</div>
-                    <img src="" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - 25.6&#176; C</div>
-                    <div class="temp">Day - 35.6&#176; C</div>
-                </div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-                <div class="weather-forecast-item">
-                    <div class="day">Tues</div>
-                    <img src="" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - 25.6&#176; C</div>
-                    <div class="temp">Day - 35.6&#176; C</div>
-                </div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-                <div class="weather-forecast-item">
-                    <div class="day">Tues</div>
-                    <img src="" alt="weather icon" class="w-icon">
-                    <div class="temp">Night - 25.6&#176; C</div>
-                    <div class="temp">Day - 35.6&#176; C</div>
+                <div class="weather-item">
+                    <p>Wind Speed</p>
+                    <p id="currentWindspeed"> --- </p>
                 </div>
             </div>
         </div>
+    </div>
+
+        <!--    Map-->
+        <div class="col-lg-8">
+            <div id='map' style='width: 100%; height: 500px; margin-bottom: 1rem'></div>
+        </div>
+
+        <!--    Row-->
+        <div  class="container d-flex justify-content-center">
+            <div class="row forecast-row">
+            </div>
+        </div>
+</main>
+
+        <!--        <div class="future-forecast">-->
+<!--            <div class="today" id="current-temp">-->
+<!--                <img src="" alt="weather icon" class="w-icon">-->
+<!--                <div class="day">Monday</div>-->
+<!--                <div class="temp">Night - 25.6&#176; C</div>-->
+<!--                <div class="temp">Day - 35.6&#176; C</div>-->
+<!--            </div>-->
+<!--            <div class="weather-forecast" id="weather-forecast">-->
+<!--                <div class="weather-forecast-item">-->
+<!--                    <div class="day">Tues</div>-->
+<!--                    <img src="" alt="weather icon" class="w-icon">-->
+<!--                    <div class="temp">Night - 25.6&#176; C</div>-->
+<!--                    <div class="temp">Day - 35.6&#176; C</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="weather-forecast" id="weather-forecast">-->
+<!--                <div class="weather-forecast-item">-->
+<!--                    <div class="day">Tues</div>-->
+<!--                    <img src="" alt="weather icon" class="w-icon">-->
+<!--                    <div class="temp">Night - 25.6&#176; C</div>-->
+<!--                    <div class="temp">Day - 35.6&#176; C</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 </main>
 

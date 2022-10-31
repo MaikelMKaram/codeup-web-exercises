@@ -34,7 +34,7 @@ map.on('click', mainFunction);
 function mainFunction(e){
     let count = 5;
     let coordinates = e.lngLat;
-    let address = e.target.value;
+    // let address = e.target.value;
     marker.setLngLat(coordinates).addTo(map);
 var input = coordinates
     $.ajax({
