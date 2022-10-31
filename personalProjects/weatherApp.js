@@ -86,6 +86,10 @@ function mainFunction(e){
     let coordinates = e.lngLat;
     let address = e.target.value;
     marker.setLngLat(coordinates).addTo(map);
+    map.flyTo({center:coordinates,
+        zoom: 8,
+        duration: 4000,
+    });
     // var input = coordinates
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather",
