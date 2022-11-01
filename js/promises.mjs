@@ -1,6 +1,8 @@
 
 let repo;
-let commitURL
+let commitURL;
+let dateTime;
+
 
 fetch('https://api.github.com/users',  {headers: {'Authorization': ghKey}})
     .then(response => response.json())
@@ -16,6 +18,9 @@ fetch('https://api.github.com/users',  {headers: {'Authorization': ghKey}})
                     .then(res => res.json())
                     .then(res => {
                         console.log(res);
+                        dateTime = res[0].commit.author.date.split("T")[0];
+                        console.log(dateTime);
+                        return dateTime;
                     })
             })
     });
