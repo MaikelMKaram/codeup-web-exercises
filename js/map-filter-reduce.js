@@ -60,11 +60,14 @@ console.log(averageExperience);
 let emails = [];
 users.forEach(x => emails.push(x.email));
 console.log(emails);
-let longestEmail = users.reduce((a,b) => {
-    if (a.length > b.length){
+let longestEmail = emails.reduce((a,b) => {
+    if (a.length - b.length >= 0){
         return a;
     } else {
         return b;
     }
-}, "").email;
+});
 console.log(longestEmail);
+
+//Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+
