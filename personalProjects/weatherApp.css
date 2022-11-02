@@ -34,12 +34,18 @@ body {
 .current-info .other .weather-item{
     display: flex;
     justify-content: space-around;
-    border: 1px solid white;
     border-radius: 10px;
     padding-top: 25px;
     padding-bottom: 0px;
 }
 
+.CCs{
+    column-count: 2;
+}
 .current-conditions{
-    column-count: 3;
+    border: 1px solid white;
+}
+
+.current-conditions-2 {
+    border: 1px solid white;
 }

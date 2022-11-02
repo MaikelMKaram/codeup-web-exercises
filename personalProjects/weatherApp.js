@@ -61,7 +61,6 @@ $.ajax({
         }
     }).done(function (data){
     // let time = new Date(${data.dt} * 1000).toLocaleString();
-    // console.log(time);
 
     $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
         $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
