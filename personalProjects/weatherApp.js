@@ -55,8 +55,8 @@ $.ajax({
         type: "GET",
         data: {
             appid: weatherApp_API,
-            lat: longitude,
-            lon: latitude,
+            lat: latitude,
+            lon: longitude,
             units: "imperial",
         }
     }).done(function (data){
@@ -69,7 +69,7 @@ $.ajax({
         $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 50px">`);
-        $('#timeOfDay').html(`<p>${new Date((data.dt + data.timezone + 18000)*1000)}</p>`);
+        // $('#timeOfDay').html(`<p>${new Date(data.dt + data.timezone + 18000 *1000).toLocaleString().split(',')[1]}</p>`);
         })
     })
 }
@@ -114,7 +114,7 @@ function mainFunction(e){
         $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 50px">`);
-        $('#timeOfDay').html(`<p>${new Date((data.dt + data.timezone + 18000)*1000)}</p>`);
+        // $('#timeOfDay').html(`<p>${new Date(data.dt + data.timezone *1000).toLocaleString().split(',')[1]}</p>`);
     })
 
     $.ajax({
