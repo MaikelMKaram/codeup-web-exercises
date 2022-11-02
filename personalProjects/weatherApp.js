@@ -32,7 +32,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/dark-v10',
     // center: [cLong, cLat],
     center: [-86.80541779251777, 33.404339086319375],
-    zoom: 8,
+    zoom: 6,
     projection: 'globe'
 });
 
@@ -47,7 +47,7 @@ navigator.geolocation.getCurrentPosition((success) => {
 getWeatherData();
 function getWeatherData(){
     navigator.geolocation.getCurrentPosition((success) => {
-    let {latitude, longitude} = success;
+    let {latitude, longitude} = success.coords;
 
 //    Current Weather Conditions
 $.ajax({
@@ -55,19 +55,21 @@ $.ajax({
         type: "GET",
         data: {
             appid: weatherApp_API,
-            lat: success.coords.latitude,
-            lon: success.coords.longitude,
+            lat: longitude,
+            lon: latitude,
             units: "imperial",
         }
     }).done(function (data){
+        console.log(data);
+        let dt = data.dt;
     // let time = new Date(${data.dt} * 1000).toLocaleString();
-
+    console.log(dt);
     $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
         $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
         $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 50px">`);
-        $('#time').html(`<p>${data.dt}</p>`);
+        $('#timeOfDay').html(`<p>${new Date(data.dt*1000).toLocaleString().split(',')[1]}</p>`);
         })
     })
 }
@@ -92,7 +94,7 @@ function mainFunction(e){
     let address = e.target.value;
     marker.setLngLat(coordinates).addTo(map);
     map.flyTo({center:coordinates,
-        zoom: 8,
+        zoom: 6,
         duration: 2000,
     });
     // var input = coordinates
@@ -112,6 +114,7 @@ function mainFunction(e){
         $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 50px">`);
+        $('#timeOfDay').html(`<p>${new Date((data.dt + data.timezone + 18000)*1000)}</p>`);
     })
 
     $.ajax({
