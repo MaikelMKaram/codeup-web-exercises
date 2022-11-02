@@ -60,11 +60,15 @@ $.ajax({
             units: "imperial",
         }
     }).done(function (data){
-        $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
+    // let time = new Date(${data.dt} * 1000).toLocaleString();
+    // console.log(time);
+
+    $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
         $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
         $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 50px">`);
+        $('#time').html(`<p>${data.dt}</p>`);
         })
     })
 }
