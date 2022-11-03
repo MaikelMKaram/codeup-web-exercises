@@ -64,9 +64,9 @@ $.ajax({
         let dt = data.dt;
     // let time = new Date(${data.dt} * 1000).toLocaleString();
     console.log(dt);
-    $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
-        $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
-        $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
+    $('#currentTemp').html(`<p><strong>${data.main.temp.toFixed(1)}˚ F</strong></p>`);
+        $('#currentHumidity').html(`<p><strong>${data.main.humidity}</strong></p>`);
+        $('#currentWindspeed').html(`<p><strong>${data.wind.speed}</strong></p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 80px">`);
         // $('#timeOfDay').html(`<p>${new Date(data.dt + data.timezone + 18000 *1000).toLocaleString().split(',')[1]}</p>`);
@@ -109,9 +109,9 @@ function mainFunction(e){
         }
     }).done(function (data){
         console.log(data);
-        $('#currentTemp').html(`<p>${data.main.temp.toFixed(1)}˚ F</p>`);
-        $('#currentHumidity').html(`<p>${data.main.humidity}</p>`);
-        $('#currentWindspeed').html(`<p>${data.wind.speed}</p>`);
+        $('#currentTemp').html(`<p><strong>${data.main.temp.toFixed(1)}˚ F</strong></p>`);
+        $('#currentHumidity').html(`<p><strong>${data.main.humidity}</strong></p>`);
+        $('#currentWindspeed').html(`<p><strong>${data.wind.speed}</strong></p>`);
         $('#description').html(`<p>${data.weather[0].description}</p>`);
         $('#icon').html(`<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" style="height: 80px">`);
         // $('#timeOfDay').html(`<p>${new Date(data.dt + data.timezone *1000).toLocaleString().split(',')[1]}</p>`);
