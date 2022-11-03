@@ -35,17 +35,21 @@ body {
     display: flex;
     justify-content: space-around;
     border-radius: 10px;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
 .CCs{
     column-count: 2;
 }
 
-.current-conditions{
-}
-
 .current-conditions-2 {
     border-left: 1px solid white;
+}
 
+.forecast-row {
+    background: rgba(24,24,27,0.6);
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid white;
 }
