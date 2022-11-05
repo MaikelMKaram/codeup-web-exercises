@@ -141,15 +141,25 @@ function mainFunction(e){
                 pressure = x.main.pressure;
 
                 let html = "";
-                html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date +"</strong>" + "</p>";
-                html += '<p class="mb-2">' + "<strong>" + tempMin + '˚F' + "</strong>" + ' | ' + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
-                html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
-                html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
-                html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
-                html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
-                html += '<p>' + 'Pressure: ' + "<strong>" + pressure + "</strong>" + '</p>';
-                html += '</div>';
-
+                html +=`<div class="card" style="width: 13rem; background-color: rgba(24,24,27,0.6)">
+  <div class="card-body" style="color: whitesmoke">
+    <h5 class="card-title">${date}</h5>
+    <p class="card-text"> ${tempMax} ˚F | ${tempMin} ˚F<br>
+    <img src="http://openweathermap.org/img/w/${icon}.png"> <br>
+    ${description}<br>
+    Humidity: <strong>${humidity}</strong><br>
+    Wind: <strong>${wind}</strong><br>
+    </p>
+  </div>
+</div>`
+                // html += '<div class="col card-header"><p class="mb-4 card-header">' + "<strong>" + date +"</strong>" + "</p>";
+                // html += '<p class="mb-2">' + "<strong>" + tempMin + '˚F' + "</strong>" + ' | ' + "<strong>" + tempMax + '˚F' + "</strong>" + '</p>';
+                // html += '<img src="http://openweathermap.org/img/w/' + icon + '.png">'
+                // html += '<p class="mb-2">' + 'Desciption: ' + "<strong>" + description + "</strong>" + '</p>';
+                // html += '<p class="mb-2">' + 'Humdidity: ' + "<strong>" + humidity + "</strong>" + '</p>';
+                // html += '<p class="mb-2"> ' + 'Wind: ' + "<strong>" + wind + "</strong>" + '</p>';
+                // html += '<p>' + 'Pressure: ' + "<strong>" + pressure + "</strong>" + '</p>';
+                // html += '</div>';
                 $('.forecast-row').append(html);
                 count--;
             }

@@ -20,7 +20,7 @@
 <!-- Navigation bar -->
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
     <div class="container-fluid ms-5 ps-5">
-        <a class="navbar-brand me-auto" href="#"><h4><strong>Weather App</strong></h4></a>
+        <a class="navbar-brand me-auto" href="#"><h4><strong>Prompt Weather Prompt</strong></h4></a>
         <div>
             <div class="date text-light me-5 pe-5" id="date">
                 Date
@@ -40,6 +40,7 @@
 <!-- Main -->
 <main>
     <div class="container">
+<!--        Current Info-->
         <div class="current-info">
             <div class="other" id="current-weather-items">
                 <h4>Current Conditions</h4>
@@ -69,45 +70,12 @@
                 </div>
             </div>
         </div>
-    </div>
-        <!--    Map-->
-        <div>
-            <div id='map' style='width: 100%; height: 500px; margin-bottom: 1rem'></div>
+<!--        Map-->
+        <div id='map' style='width: 100%; height: 500px; margin-bottom: 1rem'></div>
+<!--        Forecast-->
+        <div class="row forecast-row d-flex justify-content-center">
         </div>
-
-        <!--    Row-->
-        <div  class="container d-flex justify-content-center">
-            <div class="row forecast-row">
-            </div>
-        </div>
-    </div>
-</main>
-
-        <!--        <div class="future-forecast">-->
-<!--            <div class="today" id="current-temp">-->
-<!--                <img src="" alt="weather icon" class="w-icon">-->
-<!--                <div class="day">Monday</div>-->
-<!--                <div class="temp">Night - 25.6&#176; C</div>-->
-<!--                <div class="temp">Day - 35.6&#176; C</div>-->
-<!--            </div>-->
-<!--            <div class="weather-forecast" id="weather-forecast">-->
-<!--                <div class="weather-forecast-item">-->
-<!--                    <div class="day">Tues</div>-->
-<!--                    <img src="" alt="weather icon" class="w-icon">-->
-<!--                    <div class="temp">Night - 25.6&#176; C</div>-->
-<!--                    <div class="temp">Day - 35.6&#176; C</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="weather-forecast" id="weather-forecast">-->
-<!--                <div class="weather-forecast-item">-->
-<!--                    <div class="day">Tues</div>-->
-<!--                    <img src="" alt="weather icon" class="w-icon">-->
-<!--                    <div class="temp">Night - 25.6&#176; C</div>-->
-<!--                    <div class="temp">Day - 35.6&#176; C</div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    </div>
+</div>
 </main>
 
 <!-- Footer -->
