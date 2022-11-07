@@ -144,9 +144,9 @@ function mainFunction(e){
                 html +=`<div class="card" style="width: 13rem; background-color: rgba(24,24,27,0.6)">
   <div class="card-body" style="color: whitesmoke">
     <h5 class="card-title">${date}</h5>
-    <p class="card-text"> ${tempMax} ˚F | ${tempMin} ˚F<br>
+    <p class="card-text"> ${tempMax} ˚F <br>
+    ${description} <br>
     <img src="http://openweathermap.org/img/w/${icon}.png"> <br>
-    ${description}<br>
     Humidity: <strong>${humidity}</strong><br>
     Wind: <strong>${wind}</strong><br>
     </p>
