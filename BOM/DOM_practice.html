@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Worksheet</title>
+    <style>
+        .somethingClass {
+            border: 1px solid purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="hoverChange">Racecar</h1>
+
+<br>
+<br>
+
+<p id="paragraphLorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur corporis cupiditate et explicabo, facilis harum illo inventore laboriosam molestiae nemo, nisi nobis nulla provident quia repellat rerum veritatis voluptatibus?</p>
+
+<br>
+<br>
+
+<p id="colorMe">Webtwo ipsum orkut reddit meebo skype vimeo jajah spock empressr zimbra, mobly napster hipmunk prezi chartly bitly spock. Loopt twones meebo hipmunk, fleck xobni. Convore bebo rovio vimeo zanga handango blekko koofers, loopt twitter imvu flickr kaboodle chegg. Zillow lala mzinga, sifteo. Voki heekya sococo geni oovoo disqus, empressr doostang lijit.</p>
+<br>
+
+<input type="text" id="colorInput"><button id="getInput">Color my paragraph!</button>
+
+</body>
+
+<!-- JQuery-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    //TODO: When the h1#hoverChange element has a user HOVER over it, change the String "Racecar" to "Tacocat" [mouseIn] and back to "Racecar" [mouseOut]
+
+    // Using JQuery
+    // $('#hoverChange').hover(function(){
+    //     $('#hoverChange').html("Tacocat");
+    // }, function(){
+    //    $('#hoverChange').html("Racecar")
+    // })
+
+    // Template for JQuery:
+    // $("#id").hover(function(){}, function(){})
+
+    // Using vanilla JS (declaring variable)
+    // let hoverEffect = document.getElementById("hoverChange");
+    //
+    // hoverEffect.addEventListener("mouseenter", function(){
+    //     hoverEffect.innerHTML = "Tacocat";
+    // })
+
+    // hoverEffect.addEventListener("mouseleave", function(){
+    //     hoverEffect.innerHTML = "Racecar";
+    // })
+
+    //Using vanilla JS without declaring variable
+    // document.getElementById("hoverChange").addEventListener(event to listen for, function to do);
+
+
+
+    //TODO: When the p#paragraphLorem is clicked on, change the font's weight to BOLD and add a border that is: 1px; unbroken; and purple in color [bonus: How could we have it return to normal on a 2nd click from our user?]
+
+    //Template for JQuery
+    // $('#paragraphLorem').click(function(){
+    //     $('#paragraphLorem').toggleClass('somethingClass');
+    // })
+
+    //Using vanilla JS
+    // let clickEffect = document.getElementById('paragraphLorem');
+
+    // clickEffect.addEventListener("click", function(){
+    //     clickEffect.classList.toggle('somethingClass');
+    // })
+
+
+    //TODO: My p#colorMe element is looking a little bland - can you set it up where a user can type a color into input#colorInput, click button#getInput, and the color they typed in become the background of my p#colorMe element? HINT: Presume our users are well-behaved and we ALWAYS get a proper CSS color as input
+
+    // Using JQuery
+    // $('#getInput').click(function (){
+    //     $('#colorMe').css("background-color", $('#colorInput').val());
+    // })
+
+    //Using vanilla JS
+    let btnInput = document.getElementById('getInput');
+    let bgColor = document.getElementById('colorMe');
+
+    btnInput.addEventListener("click", function (){
+        clearTimeout(timeoutVar);
+        let colInput = document.getElementById('colorInput').value;
+        bgColor.style.backgroundColor = colInput;
+    })
+
+
+    //TODO Bonus: Remember when you helped me defuse the BOM? I have a different mission for you today: can you help me set up some JavaScript that, 10 seconds after our page loads, will replace all of the HTML on the page with text that says: "BOOM"
+
+    let timeoutVar = setTimeout(function(){
+        // document.body.innerHTML = "BOOM";
+        $("body").html("BOOM");
+    }, 5000 )
+
+
+</script>
+</html>
